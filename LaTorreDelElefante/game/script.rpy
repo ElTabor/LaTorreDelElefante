@@ -2,7 +2,10 @@
 
 # Declara los personajes usados en el juego como en el ejemplo:
 
-define e = Character("Eileen")
+define n = Character("Narrador")
+define c = Character("Conan")
+define d = Character("Drakos")
+define t = Character("Taurus")
 
 
 # El juego comienza aquí.
