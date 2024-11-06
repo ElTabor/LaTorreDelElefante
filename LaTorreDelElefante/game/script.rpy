@@ -13,7 +13,7 @@ define ladrón = Character("Ladrón")
 
 label start:
 
-scene calle_noche
+scene interior_del_bar
 narrador "En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
 
 drakos "Por Bel, dios de los ladrones, que voy a enseñarles como se roba una mujer; estara del otro lado de la frontera de Zamora antes del amanecer, y allí habrá una caravana esperándola. Un conde de Ofir me prometió trecientas piezas de plata por una joven brithunia de buena familia. Estuve vagando varias semanas por las ciudades fronterizas, donde me hacía pasar por mendigo, hasta que encontré una que valiera la pena. ¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por ella el secreto de la Torre del Elefante."
