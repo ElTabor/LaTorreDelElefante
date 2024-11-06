@@ -55,7 +55,21 @@ conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
 drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
 
 narrador "Drakos le da un leve empujón para intimidar a Conan. "
-    show eileen happy
+
+menu: 
+"Matar a Drakos?":
+    "Sí":
+        $ matar_drakos = True
+        jump matar_drakos_escena
+    "No":
+        $ matar_drakos = False
+        jump perdonar_drakos_escena
+    
+
+
+
+
+show eileen happy
 
     # Presenta las líneas del diálogo.
 
