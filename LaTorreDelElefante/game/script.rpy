@@ -106,7 +106,7 @@ conan "Así es. Gracias por la compañía."
 narrador "DRAKOS observa cómo CONAN se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras. "
 
 
-scene_exterior_jardinesDeLaTorre:
+scene exterior_jardinesDeLaTorre:
 
 narrador "En la distancia, ve movimiento detrás de otros arbustos. CONAN decide correr hacia ellos empuñando su espada, listo para eliminar cualquier amenaza. Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien. Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
 
