@@ -7,6 +7,8 @@ define conan = Character("Conan")
 define drakos = Character("Drakos")
 define taurus = Character("Taurus")
 define ladrón = Character("Ladrón")
+define yag kosha = Character("Yag Kosha")
+define yara = Character("Yara")
 
 
 # El juego comienza aquí.
