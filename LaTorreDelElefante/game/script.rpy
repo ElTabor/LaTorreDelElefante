@@ -38,8 +38,6 @@ conan "Yo he visto esa torre. Está en un enorme jardín situado en lo alto de l
 
 drakos "¡Escuchen a este pagano salvaje!¡Pretende robar la joya de YARA!"
 
-*DRAKOS se levanta de su asiento. Se lo muestra enfrentado a CONAN en un plano americano.*
-
 drakos "Entonces presta atención y aprende, muchacho. Debes saber que en Zamora, y especialmente en esta ciudad, hay más intrépidos ladrones que en cualquier otro lugar del mundo, incluido Koth. Si algún mortal hubiera sido capaz de robar la piedra preciosa, puedes estar seguro de que habría desaparecido hace mucho tiempo. Tú hablas de escalar las murallas, pero una vez que lo hubieras hecho, desearías irte inmediatamente. Por la noche no hay guardias, es decir, guardias humanos, en los jardines por una buena razón. Pero en el cuarto de guardia, en la parte inferior de la torre, hay hombres armados, y aun si lograras escabullirte entre los que rondan por los jardines de noche, tendrías que eludir a los soldados, porque la gema está guardada en algún lugar de la parte superior de la torre."
 
 conan "Pero si alguien consiguiera atravesar los jardines, ¿por qué no iba a poder llegar hasta la gema por la parte superior de la torre, eludiendo de ese modo a los soldados?"
