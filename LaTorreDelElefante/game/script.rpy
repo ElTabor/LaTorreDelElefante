@@ -7,7 +7,7 @@ define conan = Character("Conan")
 define drakos = Character("Drakos")
 define taurus = Character("Taurus")
 define ladrón = Character("Ladrón")
-define yag kosha = Character("Yag Kosha")
+define yagKosha = Character("Yag Kosha")
 define yara = Character("Yara")
 
 
@@ -15,7 +15,7 @@ define yara = Character("Yara")
 
 label start:
 
-scene interior_del_bar:
+scene interior_del_bar
 narrador "En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
 
 drakos "Por Bel, dios de los ladrones, que voy a enseñarles como se roba una mujer; estara del otro lado de la frontera de Zamora antes del amanecer, y allí habrá una caravana esperándola. Un conde de Ofir me prometió trecientas piezas de plata por una joven brithunia de buena familia. Estuve vagando varias semanas por las ciudades fronterizas, donde me hacía pasar por mendigo, hasta que encontré una que valiera la pena. ¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por ella el secreto de la Torre del Elefante."
@@ -24,7 +24,7 @@ narrador "Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la m
 
 conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre.¿Cuál es su secreto?"
 
-drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí".
+drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí."
 
 ladrón "No nos gustan los forasteros."
 
@@ -56,34 +56,35 @@ drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que som
 
 narrador "Drakos le da un leve empujón para intimidar a Conan. "
 
-menu: 
-"Matar a Drakos?":
+menu Matar_a_Drakos:
     "Sí":
         $ matar_drakos = True
-        jump matar_drakos_escena
+        jump matar_a_drakos
     "No":
         $ matar_drakos = False
-        jump perdonar_drakos_escena
+        jump perdonar_a_drakos
     
 
-label matar_drakos_escena:
+label matar_a_drakos:
+scene matar_drakos_escena
 conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
 
 narrador "Con un solo movimiento, CONAN separa la cabeza del cuerpo de DRAKOS."
 
-scene exterior_calle_Arenjún,_Zamora_Noche
+label  perdonar_a_drakos:
+scene exterior_calle_Arenjun__Zamora_Noche
 
 narrador "La taberna queda atrás mientras CONAN avanza sigilosamente por las calles desiertas, dirigiéndose hacia la Torre del Elefante. Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador, aunque los callejones de Zamora le eran desconocidos. A su alrededor, los templos brillan bajo las estrellas, pero las deidades locales no le impresionan. CONAN cree en una verdad simple: los dioses, como Crom, son indiferentes y terribles. Frente a él, la Torre del Elefante se alza imponente y misteriosa, rodeada de un jardín exótico protegido por altas murallas. Aunque las leyendas sobre los peligros de la torre y YARA, su guardián oscuro, le rondan la mente, CONAN no teme. Da un gran salto y alcanza la cima de la muralla. Ve unos arbustos y se lanza hacia ellos"
 
-label perdonar_drakos_escena:
+scene perdonar_drakos_escena
 
-scene interior_bar:
+scene interior_bar
 
 conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañándome hacia la torre. Levántate."
 
 narrador "CONAN envaina su espada y extiende su mano. DRAKOS la toma, se para y se sacude el polvo mientras mira a CONAN con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
 
-scene exterior_calle_arenjún_Zamora_noche:
+scene exterior_calle_arenjún_Zamora_noche
 
 drakos "Mi nombre es DRAKOS, por cierto. Aunque dudo que te importe."
 
@@ -106,7 +107,7 @@ conan "Así es. Gracias por la compañía."
 narrador "DRAKOS observa cómo CONAN se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras. "
 
 
-scene exterior_jardinesDeLaTorre:
+scene exterior_jardinesDeLaTorre
 
 narrador "En la distancia, ve movimiento detrás de otros arbustos. CONAN decide correr hacia ellos empuñando su espada, listo para eliminar cualquier amenaza. Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien. Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
 
@@ -131,17 +132,3 @@ narrador "TAURUS, divertido, ríe en silencio, y aunque CONAN puede notar que no
 taurus "¡Por Bel, dios de los ladrones! Pensaba que era el único con el valor suficiente para intentar este robo. Esos zamorios se creen grandes ladrones, pero tú, CONAN... me gusta tu osadía. Nunca he compartido una aventura con nadie, pero por Bel, vamos a intentar esto juntos, si estás de acuerdo."
 
 narrador "Conan observó al hombre con ojos penetrantes antes de hablar." 
-
-
-
-show eileen happy
-
-    # Presenta las líneas del diálogo.
-
-    e "Has creado un nuevo juego Ren'Py."
-
-    e "Añade una historia, imágenes y música, ¡y puedes presentarlo al mundo!"
-
-    # Finaliza el juego:
-
-    return
