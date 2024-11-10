@@ -9,6 +9,7 @@ define ladrón = Character("LADRÓN", color = "#0a0a0a")
 define yagKosha = Character("YAG KOSHA", color = "#91ef91")
 define yara = Character("YARA", color = "#981723")
 
+default conan_esta_solo = True
 
 # El juego comienza aquí.
 
@@ -68,7 +69,6 @@ menu Matar_a_Drakos:
         $ matar_drakos = False
         jump perdonar_a_drakos
     
-
 label matar_a_drakos:
 scene matar_drakos_escena
 conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
@@ -225,3 +225,189 @@ taurus "¡Es la muerte! Si se levanta viento y sopla en nuestra dirección, tend
 "Tendidos en el suelo entre las sombras yacen cinco cuerpos de color pardo cuya mirada feroz se ha extinguido para siempre. Un olor dulzón y empalagoso persiste en el aire."
 
 conan "¡Murieron sin lanzar un solo rugido! TAURUS, ¿qué era ese polvo?"
+
+
+#comienzo de la pagina 25 a 32
+
+"El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
+"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados.
+En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, TAURUS extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
+"CONAN, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodeaban. Diamantes, rubíes, esmeraldas, zafiros, turquesas y piedras de la luna brillan como estrellas incrustadas en un cielo de plata."
+"Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
+
+conan "Aquí hay una fabulosa fortuna, TAURUS."
+
+taurus "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
+
+"CONAN trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
+"Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas. La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
+"CONAN dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a TAURUS, quien está recogiendo la cuerda. El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
+
+taurus "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
+"Ante el aviso de su compañero, TAURUS voltea para ver a CONAN apuntando con su mano sobre sus cabezas."
+
+"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
+
+"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
+
+menu CONFIAR_EN_TAURUS:
+    "Entrar con el":
+        $ conan_esta_solo =False
+        jump entrar_con_taurus
+    "Dejer entrar solo a Taurus":
+        $ conan_esta_solo =True
+        jump entra_solo_taurus
+
+label entrar_con_taurus:
+
+conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda."
+
+taurus "De acuerdo. Quédate cerca."
+
+"A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
+
+taurus "Aaagh! Diablos! ¿Qué es esta cosa?"
+
+"Una pegajosa sustancia cubre a TAURUS. Pegándolo al suelo e inmovilizándolo."
+
+conan "Por Crom! ¿De dónde vino eso?"
+
+"Nuevamente, el instinto bárbaro de CONAN salva al cimmerio de un nuevo ataque. Una enorme araña intenta embestir desde atrás. Al fallar, la araña continúa hacia TAURUS."
+
+conan "¡NOOO!"
+
+"La araña toma a TAURUS por el cuello con sus colmillos y le arrancó la cabeza de un tirón."
+
+conan "Maldita! ¡Las pagarás!"
+
+"La araña carga hacia CONAN nuevamente."
+
+if conan_esta_solo == False:
+    jump conan_pelea_con_la_araña
+
+#taurus entra solo
+label entra_solo_taurus:
+
+conan "Está bien, fijate que hay dentro de ese cuarto."
+
+taurus "De acuerdo."
+
+"El ladrón abre la puerta y se adentra en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
+
+taurus "Diablos… parece que hasta aquí llegas, cimerio…"
+
+"TAURUS sale del cuarto"
+
+taurus "Es seguro, pasa."
+
+"Sin pensarlo mucho, CONAN se adentra en el cuarto solo para escuchar un fuerte portazo detrás de él."
+
+taurus "Debo reconocer que eres muy hábil, bárbaro! Pero te vendría bien un poco de viveza."
+
+conan "Maldito! ¡Déjame salir!"
+
+taurus "Lo siento, CONAN. No puedo hacer eso si quiero quedarme con la gema. ¡Saluda a mi amiga!"
+
+conan "¡NO! Abre TAURUS, cobarde. ¡Me las vas a pagar!"
+
+"El cimmerio siente como algo cae lentamente del techo, y al darse vuelta ahí la ve. Una enorme araña que vigila la entrada al cuarto de la gema."
+
+"¡Maldita sea! Tendremos que enfrentarnos, asqueroso insecto."
+
+label conan_pelea_con_la_araña:
+
+menu cómo_atacar_a_la_araña:
+    "Atacar de frente":
+        jump De_frente
+    "Lanzar la espada al candelabro":
+        jump Lanzar_espada
+
+label De_frente:
+ 
+"CONAN empuña su espada y ataca a la araña de frente."
+
+conan "¡AAAAH!"
+
+"Justo antes de alcanzarla, el bárbaro se desliza por debajo de ella y la apuñala en el pecho. La araña se desploma y CONAN se acerca para recuperar su espada."
+
+if conan_esta_solo == True :
+    jump espera_taurus #409
+else:
+    jump recamara_de_yag_kosha #109
+
+label espera_taurus:
+
+"Se escucha un silencio atroz desde fuera del cuarto por lo que TAURUS decide entrar."
+
+taurus "Espero que esa estúpida araña haya hecho su trabajo."
+
+"Al abrir las puertas ve el cuerpo de la araña en una posición postmortem y ni bien entra siente unos pasos acercándose cada vez más rápido hacia él."
+
+conan "¡Te dije que me las ibas a pagar, ladrón malnacido!"
+
+"Sin ningún tipo de tapujo CONAN corre hacia TAURUS y le corta el cuello de una manera limpia dejando que se muera ahogado en su sangre."
+
+menu continuar:
+    "siguiente":
+        jump recamara_de_yag_kosha
+
+label Lanzar_espada:
+
+"CONAN esquiva a la araña con mucha agilidad. En sus movimientos, nota que en el medio del cuarto hay un candelabro gigante y se le viene un plan a la cabeza."
+
+conan "Asquerosa araña, ven ¡Atácame!"
+
+"La araña se va encima del bárbaro sedienta de sangre y con violencia.
+Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga.
+Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de CONAN para atacar su cuello y romperlo."
+
+if conan_esta_solo == True :
+    jump espera_taurus_conan_M #409
+else:
+    jump Muerte #109
+
+label espera_taurus_conan_M:
+
+"Se escucha un silencio atroz desde fuera del cuarto por lo que TAURUS decide entrar."
+
+taurus "Espero que esa estúpida araña haya hecho su trabajo."
+
+"TAURUS abre las puertas y ve el cuerpo de CONAN tirado en el medio del cuarto. Confiado se fue acercando de a poco hasta percatarse de que tiene el cuello roto, asustado se da media vuelta para salir corriendo de la habitación pero ya era demasiado tarde"
+"la araña lo captura con su tela lo deja colgado en el cuarto y aprovecha para devorarlo poco a poco comenzando con su cabeza."
+
+label Muerte:
+
+"Finalmente, los cadáveres de los audaces ladrones que se atrevieron a adentrarse en la famosa torre yacen fríamente en ella. Asesinados por la bestia protectora del secreto de la torre."
+
+menu fin:
+    "final":
+        jump fin_de_la_partida
+
+label recamara_de_yag_kosha:
+scene int recamara de yag kosha
+
+"CONAN entra sigilosamente en una habitación lujosa y exótica, llena de jade y marfil, con un ídolo extraño y aterrador en el centro. El ídolo tiene un cuerpo humanoide verde y una cabeza de pesadilla con colmillos de elefante."
+
+yagKosha "¿Quién anda ahí? ¿Has venido a torturarme de nuevo, YARA? ¿No te vas a cansar nunca?"
+
+"Las lágrimas ruedan por sus mejillas, CONAN observa las extremidades torturadas de YAG KOSHA y siente una profunda compasión por su sufrimiento."
+
+conan "No soy YARA. Soy solamente un ladrón. No te haré daño."
+
+yagKosha "Tú no perteneces a la raza maligna de YARA. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo."
+ 
+yagKosha "Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
+
+conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
+
+yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo YARA imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
+
+"Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. CONAN lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
+
+yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
+
+yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por YARA."
+
+yagKosha "Al principio, YARA aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
+
+"CONAN vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
