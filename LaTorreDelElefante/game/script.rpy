@@ -230,42 +230,42 @@ conan "¡Murieron sin lanzar un solo rugido! TAURUS, ¿qué era ese polvo?"
 
 #comienzo de la pagina 25 a 32
 
-"El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
-"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
-"En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, TAURUS extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
-"CONAN, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodeaban. Diamantes, rubíes, esmeraldas, zafiros, turquesas y piedras de la luna brillan como estrellas incrustadas en un cielo de plata."
-"Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
+#"El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
+#"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
+#"En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, TAURUS extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
+#"CONAN, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodeaban. Diamantes, rubíes, esmeraldas, zafiros, turquesas y piedras de la luna brillan como estrellas incrustadas en un cielo de plata."
+#"Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
 
-conan "Aquí hay una fabulosa fortuna, TAURUS."
+#conan "Aquí hay una fabulosa fortuna, TAURUS."
 
-taurus "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
+#taurus "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
 
-"CONAN trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
-"Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas. La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
-"CONAN dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a TAURUS, quien está recogiendo la cuerda. El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
+#"CONAN trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
+#"Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas. La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
+#"CONAN dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a TAURUS, quien está recogiendo la cuerda. El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
 
-taurus "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
-"Ante el aviso de su compañero, TAURUS voltea para ver a CONAN apuntando con su mano sobre sus cabezas."
+#taurus "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
+#"Ante el aviso de su compañero, TAURUS voltea para ver a CONAN apuntando con su mano sobre sus cabezas."
 
-"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
+#"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
 
-"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
+#"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
 
-menu CONFIAR_EN_TAURUS:
-    "Entrar con el":
-        $ conan_esta_solo =False
-        jump entrar_con_taurus
-    "Dejer entrar solo a Taurus":
-        $ conan_esta_solo =True
-        jump entra_solo_taurus
+#menu CONFIAR_EN_TAURUS:
+ #   "Entrar con el":
+  #      $ conan_esta_solo =False
+   #     jump entrar_con_taurus
+    #"Dejer entrar solo a Taurus":
+     #   $ conan_esta_solo =True
+      #  jump entra_solo_taurus
 
-label entrar_con_taurus:
+#label entrar_con_taurus:
 
-conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda."
+#conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda."
 
-taurus "De acuerdo. Quédate cerca."
+#taurus "De acuerdo. Quédate cerca."
 
-"A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
+#"A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
 
 taurus "Aaagh! Diablos! ¿Qué es esta cosa?"
 
@@ -356,9 +356,8 @@ label Lanzar_espada:
 
 conan "Asquerosa araña, ven ¡Atácame!"
 
-"La araña se va encima del bárbaro sedienta de sangre y con violencia.
-Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga.
-Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de CONAN para atacar su cuello y romperlo."
+"La araña se va encima del bárbaro sedienta de sangre y con violencia. Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga."
+"Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de CONAN para atacar su cuello y romperlo."
 
 if conan_esta_solo == True :
     jump espera_taurus_conan_M #409
@@ -407,5 +406,28 @@ yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascen
 yagKosha "Al principio, YARA aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
 "CONAN vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
+"Tú no perteneces a la raza maligna de YARA. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo. Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
+
+conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
+
+yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo YARA imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
+
+"Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. CONAN lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
+
+yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota. Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por YARA. Al principio, YARA aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
+
+yagKosha "Ahora viene la gran magia. Corta mi corazón y deja que la sangre fluya sobre la piedra. Luego baja a la habitación de YARA, pronuncia su nombre y entrégale la gema. Dile: '¡Atento, viajero del destino! YAG KOSHA, el guardián de los arcanos olvidados, se digna a ofrecerte su último y más formidable conjuro.'. Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
+
+"CONAN se acerca con gesto vacilante, y YAG KOSHA le indica dónde debía clavar la hoja. CONAN aprieta los dientes y hunde profundamente la espada. La sangre fluye, empapando la hoja y su mano, y la criatura se agita antes de quedar inmóvil. CONAN, asegurándose de que ya no estaba vivo, extrae lo que parece ser el corazón de YAG KOSHA, aunque es distinto a cualquier corazón que hubiera visto. Aprieta la víscera sobre la joya, y sorprendentemente, la sangre fue absorbida por la gema. Con cuidado, CONAN sale del recinto y baja por la escalera de plata. Siente que el cuerpo de YAG KOSHA está sufriendo una transmutación detrás de él, algo que no debe presenciar. Al llegar a la puerta de ébano con la calavera de plata, la abre y ve a YARA, el brujo, en su lecho de seda negra, bajo los efectos del loto amarillo."
+
+conan "¡YARA! ¡Despierta!"
+
+"Los ojos se abren al instante y se vuelven fríos y crueles como los de un buitre. La negra figura vestida de seda se yergue lúgubre sobre el cimmerio."
+
+yara "¡Perro! ¿Qué haces aquí?"
+
+"CONAN deposita la joya sobre la enorme mesa de ébano."
+
+conan "El que envía esta gema me mandó decir:"
 
 label fin_de_la_partida:
