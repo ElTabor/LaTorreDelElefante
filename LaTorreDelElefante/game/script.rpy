@@ -215,7 +215,8 @@ taurus "¡Silencio!"
 
 "Se oyen ruidos sordos provenientes de las sombras y se ven avanzar los ojos resplandecientes. CONAN percibe las inmensas mandíbulas babeantes y las colas que azotan el aire en todas direcciones. La tensión es insoportable."
 "El cimmerio empuña la espada, a la espera del inevitable ataque de los gigantescos cuerpos. Entonces, TAURUS lleva el extremo del tubo a los labios y sopla con fuerza."
-"Un gran chorro de polvo dorado sale por el otro extremo y se extiende instantáneamente formando una densa nube de color verde amarillento que cubre los arbustos, ocultando los resplandecientes ojos. Taurus corre apresuradamente hacia el muro. Conan lo mira sin comprender. La densa nube oculta los matorrales y no se oye nada."
+"Un gran chorro de polvo dorado sale por el otro extremo y se extiende instantáneamente formando una densa nube de color verde amarillento que cubre los arbustos, ocultando los resplandecientes ojos."
+"Taurus corre apresuradamente hacia el muro. Conan lo mira sin comprender. La densa nube oculta los matorrales y no se oye nada."
 
 conan "¿Qué es ese polvo?"
 
@@ -230,8 +231,8 @@ conan "¡Murieron sin lanzar un solo rugido! TAURUS, ¿qué era ese polvo?"
 #comienzo de la pagina 25 a 32
 
 "El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
-"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados.
-En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, TAURUS extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
+"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
+"En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, TAURUS extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
 "CONAN, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodeaban. Diamantes, rubíes, esmeraldas, zafiros, turquesas y piedras de la luna brillan como estrellas incrustadas en un cielo de plata."
 "Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
 
@@ -347,9 +348,7 @@ conan "¡Te dije que me las ibas a pagar, ladrón malnacido!"
 
 "Sin ningún tipo de tapujo CONAN corre hacia TAURUS y le corta el cuello de una manera limpia dejando que se muera ahogado en su sangre."
 
-menu continuar:
-    "siguiente":
-        jump recamara_de_yag_kosha
+jump recamara_de_yag_kosha
 
 label Lanzar_espada:
 
@@ -378,10 +377,7 @@ taurus "Espero que esa estúpida araña haya hecho su trabajo."
 label Muerte:
 
 "Finalmente, los cadáveres de los audaces ladrones que se atrevieron a adentrarse en la famosa torre yacen fríamente en ella. Asesinados por la bestia protectora del secreto de la torre."
-
-menu fin:
-    "final":
-        jump fin_de_la_partida
+jump fin_de_la_partida
 
 label recamara_de_yag_kosha:
 scene int recamara de yag kosha
@@ -411,3 +407,5 @@ yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascen
 yagKosha "Al principio, YARA aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
 "CONAN vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
+
+label fin_de_la_partida:
