@@ -40,106 +40,75 @@ Drakos "No me sorprende, los cimerios son vulgares. Pero hasta el más tonto de 
 
 Drakos "¿El secreto de la Torre del Elefante? Bueno, cualquier imbécil sabe que el sacerdote Yara vive allí con la enorme joya llamada Corazón de Elefante; ese es el secreto de su magia."
     
-    scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
+scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
     
-    "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
+"Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
     
-    scene bg interior_del_bar with fade
-    
-    
-    "En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
-    
-    show drakos at center
-    Drakos "Por Bel, dios de los ladrones, que voy a enseñarles como se roba una mujer; estara del otro lado de la frontera de Zamora antes del amanecer, y allí habrá una caravana esperándola."
-    Drakos "Un conde de Ofir me prometió trecientas piezas de plata por una joven brithunia de buena familia. Estuve vagando varias semanas por las ciudades fronterizas, donde me hacía pasar por mendigo, hasta que encontré una que valiera la pena."
-    Drakos "¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por ella el secreto de la Torre del Elefante."
-    
-    hide drakos
-    "Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la manga de su túnica y se da vuelta con el entrecejo fruncido para ver a un hombre alto y corpulento"
-    
-    show conan at right
-    Conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre.¿Cuál es su secreto?"
-    
-    show drakos at left
-    Drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí."
-    
-    hide conan
-    hide drakos
-    
-    show ladrón at center
-    ladrón "No nos gustan los forasteros."
-    
-    hide ladrón
-    show conan at left
-    
-    Conan "Soy Cimerio…"
-    show drakos at right
-    Drakos "No me sorprende, los cimerios son vulgares. Pero hasta el más tonto de su tipo conocen la leyenda de la torre."
-    
-    hide conan
-    hide drakos
-    "A pesar de que el muchacho no tiene una actitud amenazante, Drakos, bajo los efectos del alcohol y la aprobación de su gente, se llena de valor y lo confronta."
-    
-    show drakos at right
-    Drakos "¿El secreto de la Torre del Elefante? Bueno, cualquier imbécil sabe que el sacerdote Yara vive allí con la enorme joya llamada Corazón de Elefante; ese es el secreto de su magia."
-    
-    show conan at left
-    Conan "Yo he visto esa torre. Está en un enorme jardín situado en lo alto de la ciudad y rodeado de elevadas murallas. No he visto guardias. Las murallas parecían fáciles de escalar. ¿Por qué nadie ha robado esa misteriosa piedra preciosa?"
-    hide conan
-    Drakos "¡Escuchen a este pagano salvaje!¡Pretende robar la joya de Yara!"
-    Drakos "Entonces presta atención y aprende, muchacho. Debes saber que en Zamora, y especialmente en esta ciudad, hay más intrépidos ladrones que en cualquier otro lugar del mundo, incluido Koth."
-    Drakos "Si algún mortal hubiera sido capaz de robar la piedra preciosa, puedes estar seguro de que habría desaparecido hace mucho tiempo. Tú hablas de escalar las murallas, pero una vez que lo hubieras hecho, desearías irte inmediatamente."
-    Drakos "Por la noche no hay guardias, es decir, guardias humanos, en los jardines por una buena razón."
-    Drakos "Pero en el cuarto de guardia, en la parte inferior de la torre, hay hombres armados, y aun si lograras escabullirte entre los que rondan por los jardines de noche, tendrías que eludir a los soldados, porque la gema está guardada en algún lugar de la parte superior de la torre."
-    show conan
-    Conan "Pero si alguien consiguiera atravesar los jardines, ¿por qué no iba a poder llegar hasta la gema por la parte superior de la torre, eludiendo de ese modo a los soldados?"
-    
-    Drakos "¡Oíd lo que está diciendo! ¡Este bárbaro debe de ser un águila capaz de volar hasta el borde enjoyado de la torre, que se halla a tan solo cincuenta metros de altura, y que tiene las paredes más lisas y resbaladizas que el cristal pulido!"
-    
-    hide conan
-    hide drakos
-    "Conan, molesto por las carcajadas burlonas de los oyentes y confundido por la falta de cortesía de los locales. Piensa en salir corriendo del lugar pero Drakos continúa con su mofa."
-    
-    show drakos at right
-    Drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, diles cómo robarías tú la piedra!"
-    
-    show conan at left
-    Conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
-    
-    Drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
-    
-    "Drakos le da un leve empujón para intimidar a Conan."
+scene bg interior_del_bar with fade
     
     
+"En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
     
-    menu Matar_a_Drakos:
-        "Sí":
-            $ Conan_mata_a_Drakos = True
-            jump matar_a_Drakos
-        "No":
-            jump perdonar_a_Drakos
+show drakos at center
+Drakos "Por Bel, dios de los ladrones, que voy a enseñarles como se roba una mujer; estara del otro lado de la frontera de Zamora antes del amanecer, y allí habrá una caravana esperándola."
+Drakos "Un conde de Ofir me prometió trecientas piezas de plata por una joven brithunia de buena familia. Estuve vagando varias semanas por las ciudades fronterizas, donde me hacía pasar por mendigo, hasta que encontré una que valiera la pena."
+Drakos "¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por ella el secreto de la Torre del Elefante."
+    
+hide drakos
+"Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la manga de su túnica y se da vuelta con el entrecejo fruncido para ver a un hombre alto y corpulento"
+    
+show conan at right
+Conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre.¿Cuál es su secreto?"
+    
+show drakos at left
+Drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí."
+    
+hide conan
+hide drakos
+    
+show ladrón at center
+ladrón "No nos gustan los forasteros."
+    
+hide ladrón
+show conan at left
+    
+Conan "Soy Cimerio…"
+show drakos at right
+Drakos "No me sorprende, los cimerios son vulgares. Pero hasta el más tonto de su tipo conocen la leyenda de la torre."
+    
+hide conan
+hide drakos
+"A pesar de que el muchacho no tiene una actitud amenazante, Drakos, bajo los efectos del alcohol y la aprobación de su gente, se llena de valor y lo confronta."
+    
+show drakos at right
+Drakos "¿El secreto de la Torre del Elefante? Bueno, cualquier imbécil sabe que el sacerdote Yara vive allí con la enorme joya llamada Corazón de Elefante; ese es el secreto de su magia."
+    
+show conan at left
 Conan "Yo he visto esa torre. Está en un enorme jardín situado en lo alto de la ciudad y rodeado de elevadas murallas. No he visto guardias. Las murallas parecían fáciles de escalar. ¿Por qué nadie ha robado esa misteriosa piedra preciosa?"
-
+hide conan
 Drakos "¡Escuchen a este pagano salvaje!¡Pretende robar la joya de Yara!"
-
 Drakos "Entonces presta atención y aprende, muchacho. Debes saber que en Zamora, y especialmente en esta ciudad, hay más intrépidos ladrones que en cualquier otro lugar del mundo, incluido Koth."
 Drakos "Si algún mortal hubiera sido capaz de robar la piedra preciosa, puedes estar seguro de que habría desaparecido hace mucho tiempo. Tú hablas de escalar las murallas, pero una vez que lo hubieras hecho, desearías irte inmediatamente."
 Drakos "Por la noche no hay guardias, es decir, guardias humanos, en los jardines por una buena razón."
 Drakos "Pero en el cuarto de guardia, en la parte inferior de la torre, hay hombres armados, y aun si lograras escabullirte entre los que rondan por los jardines de noche, tendrías que eludir a los soldados, porque la gema está guardada en algún lugar de la parte superior de la torre."
-
+show conan
 Conan "Pero si alguien consiguiera atravesar los jardines, ¿por qué no iba a poder llegar hasta la gema por la parte superior de la torre, eludiendo de ese modo a los soldados?"
-
+    
 Drakos "¡Oíd lo que está diciendo! ¡Este bárbaro debe de ser un águila capaz de volar hasta el borde enjoyado de la torre, que se halla a tan solo cincuenta metros de altura, y que tiene las paredes más lisas y resbaladizas que el cristal pulido!"
-
+    
+hide conan
+hide drakos
 "Conan, molesto por las carcajadas burlonas de los oyentes y confundido por la falta de cortesía de los locales. Piensa en salir corriendo del lugar pero Drakos continúa con su mofa."
-
+    
+show drakos at right
 Drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, diles cómo robarías tú la piedra!"
-
+    
+show conan at left
 Conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
-
+    
 Drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
-
-"Drakos le da un leve empujón para intimidar a Conan. "
+    
+"Drakos le da un leve empujón para intimidar a Conan."
 
 menu Matar_a_Drakos:
     "Sí":
@@ -149,25 +118,22 @@ menu Matar_a_Drakos:
         jump perdonar_a_Drakos
     
 label matar_a_Drakos:
-    scene bg matar_Drakos_escena with fade 
-    show conan at center
-    Conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
+scene bg matar_Drakos_escena with fade 
+show conan at center
+Conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
     
+"Con un solo movimiento, Conan separa la cabeza del cuerpo de Drakos."
     
+hide conan
     
-    "Con un solo movimiento, Conan separa la cabeza del cuerpo de Drakos."
+scene bg exterior_calle_Arenjun__Zamora_Noche with fade
+"La taberna queda atrás mientras Conan avanza sigilosamente por las calles desiertas, dirigiéndose hacia la Torre del Elefante."
+"Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador, aunque los callejones de Zamora le eran desconocidos."
+"A su alrededor, los templos brillan bajo las estrellas, pero las deidades locales no le impresionan. Conan cree en una verdad simple: los dioses, como Crom, son indiferentes y terribles."
+"Frente a él, la Torre del Elefante se alza imponente y misteriosa, rodeada de un jardín exótico protegido por altas murallas."
+"Aunque las leyendas sobre los peligros de la torre y Yara, su guardián oscuro, le rondan la mente, Conan no teme. Da un gran salto y alcanza la cima de la muralla. Ve unos arbustos y se lanza hacia ellos"
     
-    
-    hide conan
-    
-    scene bg exterior_calle_Arenjun__Zamora_Noche with fade
-    "La taberna queda atrás mientras Conan avanza sigilosamente por las calles desiertas, dirigiéndose hacia la Torre del Elefante."
-    "Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador, aunque los callejones de Zamora le eran desconocidos."
-    "A su alrededor, los templos brillan bajo las estrellas, pero las deidades locales no le impresionan. Conan cree en una verdad simple: los dioses, como Crom, son indiferentes y terribles."
-    "Frente a él, la Torre del Elefante se alza imponente y misteriosa, rodeada de un jardín exótico protegido por altas murallas."
-    "Aunque las leyendas sobre los peligros de la torre y Yara, su guardián oscuro, le rondan la mente, Conan no teme. Da un gran salto y alcanza la cima de la muralla. Ve unos arbustos y se lanza hacia ellos"
-    
-    jump Conan_llega_a_la_torre
+jump Conan_llega_a_la_torre
     
 scene matar_Drakos_escena
 Conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
@@ -185,52 +151,29 @@ scene exterior_calle_Arenjun__Zamora_Noche
 jump Conan_llega_a_la_torre
 
 label perdonar_a_Drakos:
-<<<<<<< HEAD
-    scene perdonar_Drakos_escena 
-    scene bg interior_bar with fade
+scene perdonar_Drakos_escena 
+scene bg interior_bar with fade
     
-    show conan at center
-    Conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañándome hacia la torre. Levántate."
-    hide conan
-    "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
-    
-    
-    
-    scene bg Calledezamora with fade
-    
-    
-    show drakos at left
-    Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
-    
-    show conan at right
-    Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
-=======
-scene perdonar_Drakos_escena
->>>>>>> parent of 4c01768 (Update script.rpy)
-
-scene interior_bar
-
+show conan at center
 Conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañándome hacia la torre. Levántate."
-
+hide conan
 "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
-
-scene exterior_calle_arenjún_Zamora_noche
-
+    
+    
+    
+scene bg Calledezamora with fade
+    
+    
+show drakos at left
+Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
+    
+show conan at right
 Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
 
 Conan "¿Por qué?"
 
 Drakos "¿Qué no eres cimmerio? Tu cultura se reduce a violencia y destrucción. Seguro ni siquiera tienes un nombre propio."
 
-<<<<<<< HEAD
-    Conan "Así es. Gracias por la compañía."
-    
-    hide drakos
-    hide conan
-    
-    "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
-    "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"
-=======
 Conan "Ja. Claro que tengo un nombre, Conan. Y tus creencias sobre mi cultura no son más que patrañas. Somos fuertes, poderosos y nos cuesta relacionarnos con sus costumbres civilizadas pero te aseguro que uno de nosotros porta más honor que todo un pueblo de ustedes."
 
 Drakos "Claro, y por eso estamos yendo a la torre, ¿verdad? No porque quieras robarte una gema."
@@ -242,10 +185,11 @@ Conan "La gema es lo de menos, imbécil. El verdadero valor está en demostrar m
 Drakos "Como digas… hasta aquí llego yo. Ya cumplí mi deuda?"
 
 Conan "Así es. Gracias por la compañía."
-
+hide drakos
+hide conan
+   
 "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
 "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"
->>>>>>> parent of 4c01768 (Update script.rpy)
 
 label Conan_llega_a_la_torre:
 scene exterior_jardinesDeLaTorre
