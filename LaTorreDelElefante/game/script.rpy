@@ -437,12 +437,22 @@ show Taurus at left
 scene bg dentroTerraza
 "Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
 
+
+scene bg puertaDeOro
+
+#Comienzo de seba
+$ renpy.music.set_volume(0.4, channel='music')
+
+play music "musicaDeMisterio.mp3"
+
 scene bg puertaDeOro
 show Taurus at right
-"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
+
+Taurus "Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
 
 hide Taurus
 "Conan piensa por dentro"
+
 show Conan
 "¿Debo dejar que cruce solo esa puerta?"
 
@@ -454,54 +464,102 @@ menu CONFIAR_EN_Taurus:
         jump entra_solo_Taurus
 
 label entrar_con_Taurus:
-show Conan at left
-"No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda"
-show Taurus at right
-"De acuerdo. Quédate cerca."
 
-scene puertaDeOro
+show Conan at left
+
+Conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda"
+
+show Taurus at right
+
+Taurus"De acuerdo. Quédate cerca."
+
+$ renpy.music.set_volume(0.25, channel='sound')
+play music "concrete-footsteps-6752.mp3" fadeout 1
+
+scene bg puertaDeOro
 "A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
 
 show Conan
-"Taurus, cuidado!"
 
+play music "radakan-dramaticevent.mp3" fadeout 1
+
+Conan "Taurus, cuidado!"
+hide Conan
+
+show Taurus
 Taurus "Aaagh! Diablos! ¿Qué es esta cosa?"
 
 "Una pegajosa sustancia cubre a Taurus. Pegándolo al suelo e inmovilizándolo."
+
+show Conan at left
 
 Conan "Por Crom! ¿De dónde vino eso?"
 
 "Nuevamente, el instinto bárbaro de Conan salva al cimmerio de un nuevo ataque. Una enorme araña intenta embestir desde atrás. Al fallar, la araña continúa hacia Taurus."
 
+show Arania right
+
+play sound "Sonido-Dealerta.mp3"
+
 Conan "¡NOOO!"
 
 "La araña toma a Taurus por el cuello con sus colmillos y le arrancó la cabeza de un tirón."
 
+hide Taurus
+
 Conan "Maldita! ¡Las pagarás!"
+
+play sound "20-pasos-nina-ver1-67856.mp3"
 
 "La araña carga hacia Conan nuevamente."
 
+
 jump Conan_pelea_con_la_araña
+
 
 
 #Taurus entra solo
 label entra_solo_Taurus:
 
+scene bg puertaDeOro
+
+show Conan at left
 Conan "Está bien, fijate que hay dentro de ese cuarto."
+
+show Taurus 
 
 Taurus "De acuerdo."
 
-"El ladrón abre la puerta y se adentra en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
+play music "concrete-footsteps-6752.mp3" fadeout 1
+
+hide Conan
+
+
+"El ladrón abre la puerta y se adentra en la habitación"
+
+stop music fadeout 1
+
+"Esta es oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
 
 Taurus "Diablos… parece que hasta aquí llegas, cimerio…"
 
 "Taurus sale del cuarto"
 
+show Conan at left
+
 Taurus "Es seguro, pasa."
+
+
+$ renpy.music.set_volume(0.15, channel='sound')
+play sound "Door_Slam.mp3"
+$ renpy.music.set_volume(0.25, channel='sound')
+
+play music "radakan-dramaticevent.mp3" fadeout 1
 
 "Sin pensarlo mucho, Conan se adentra en el cuarto solo para escuchar un fuerte portazo detrás de él."
 
 Taurus "Debo reconocer que eres muy hábil, bárbaro! Pero te vendría bien un poco de viveza."
+
 
 Conan "Maldito! ¡Déjame salir!"
 
@@ -509,11 +567,22 @@ Taurus "Lo siento, Conan. No puedo hacer eso si quiero quedarme con la gema. ¡S
 
 Conan "¡NO! Abre Taurus, cobarde. ¡Me las vas a pagar!"
 
+hide Conan 
+hide Taurus
+
+show Conan
+
 "El cimmerio siente como algo cae lentamente del techo, y al darse vuelta ahí la ve. Una enorme araña que vigila la entrada al cuarto de la gema."
+
+show Arania at right
+
+play sound "SonidodeArania.mp3"
 
 "¡Maldita sea! Tendremos que enfrentarnos, asqueroso insecto."
 
 label Conan_pelea_con_la_araña:
+
+stop music fadeout 1
 
 menu cómo_atacar_a_la_araña:
     "Atacar de frente":
@@ -522,10 +591,17 @@ menu cómo_atacar_a_la_araña:
         jump Lanzar_espada
 
 label De_frente:
- 
+
+show Conan 
+show Arania
+
+play sound "Desenvainar_Espada.mp3"
+
 "Conan empuña su espada y ataca a la araña de frente."
 
 Conan "¡AAAAH!"
+
+play sound "Corte de Espada.mp3"
 
 "Justo antes de alcanzarla, el bárbaro se desliza por debajo de ella y la apuñala en el pecho. La araña se desploma y Conan se acerca para recuperar su espada."
 
@@ -536,13 +612,25 @@ else:
 
 label espera_Taurus:
 
+hide Conan
+hide Arania
+scene puertaDeOro
+
+show Taurus
+
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
 Taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
+play sound "Door_Slam.mp3"
+
 "Al abrir las puertas ve el cuerpo de la araña en una posición postmortem y ni bien entra siente unos pasos acercándose cada vez más rápido hacia él."
 
+show Conan at left
+
 Conan "¡Te dije que me las ibas a pagar, ladrón malnacido!"
+
+play sound "Corte de Espada.mp3"
 
 "Sin ningún tipo de tapujo Conan corre hacia Taurus y le corta el cuello de una manera limpia dejando que se muera ahogado en su sangre."
 
@@ -550,12 +638,24 @@ jump recamara_de_yag_kosha
 
 label Lanzar_espada:
 
+scene puertaDeOro
+
+show Conan
+show Arania at right
+hide Taurus
+
 "Conan esquiva a la araña con mucha agilidad. En sus movimientos, nota que en el medio del cuarto hay un candelabro gigante y se le viene un plan a la cabeza."
 
 Conan "Asquerosa araña, ven ¡Atácame!"
 
+play sound "Wind_Cut.mp3"
 "La araña se va encima del bárbaro sedienta de sangre y con violencia. Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga."
+
+
 "Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de Conan para atacar su cuello y romperlo."
+
+hide Conan
+hide Arania
 
 if Conan_esta_solo == True :
     jump espera_Taurus_Conan_M #409
@@ -564,11 +664,20 @@ else:
 
 label espera_Taurus_Conan_M:
 
+scene puertaDeOro
+
+show Taurus
+
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
 Taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
+play sound "Door_Slam.mp3"
+
+show Arania at right
+
 "Taurus abre las puertas y ve el cuerpo de Conan tirado en el medio del cuarto. Confiado se fue acercando de a poco hasta percatarse de que tiene el cuello roto, asustado se da media vuelta para salir corriendo de la habitación pero ya era demasiado tarde"
+play sound "SonidodeArania.mp3"
 "la araña lo captura con su tela lo deja colgado en el cuarto y aprovecha para devorarlo poco a poco comenzando con su cabeza."
 
 label Muerte:
@@ -579,7 +688,13 @@ jump fin_de_la_partida
 label recamara_de_yag_kosha:
 scene int recamara de Yag Kosha
 
+show Conan
+
 "Conan entra sigilosamente en una habitación lujosa y exótica, llena de jade y marfil, con un ídolo extraño y aterrador en el centro. El ídolo tiene un cuerpo humanoide verde y una cabeza de pesadilla con colmillos de elefante."
+
+show YagKosha at left
+
+play sound "ChoirSoundEffect.mp3"
 
 yagKosha "¿Quién anda ahí? ¿Has venido a torturarme de nuevo, Yara? ¿No te vas a cansar nunca?"
 
@@ -599,25 +714,14 @@ yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente p
 
 yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
 
-yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara."
-
-yagKosha "Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
-
-"Conan vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
-"Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo. Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
-
-Conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
-
-yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
-
-"Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. Conan lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
-
-yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
 yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara. Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro."
+
 yagKosha "Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
 yagKosha "Ahora viene la gran magia. Corta mi corazón y deja que la sangre fluya sobre la piedra. Luego baja a la habitación de Yara, pronuncia su nombre y entrégale la gema. Dile: '¡Atento, viajero del destino! Yag Kosha, el guardián de los arcanos olvidados, se digna a ofrecerte su último y más formidable conjuro.'"
 yagKosha"Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
+
+#Fin de la parte Seba
 
 "Conan se acerca con gesto vacilante, y Yag Kosha le indica dónde debía clavar la hoja. Conan aprieta los dientes y hunde profundamente la espada. La sangre fluye, empapando la hoja y su mano, y la criatura se agita antes de quedar inmóvil."
 "Conan, asegurándose de que ya no estaba vivo, extrae lo que parece ser el corazón de Yag Kosha, aunque es distinto a cualquier corazón que hubiera visto. Aprieta la víscera sobre la joya, y sorprendentemente, la sangre fue absorbida por la gema. Con cuidado, Conan sale del recinto y baja por la escalera de plata."
