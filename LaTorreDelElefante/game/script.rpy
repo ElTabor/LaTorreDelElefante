@@ -17,11 +17,11 @@ default Conan_mata_a_Drakos = False
 label start:
 
 scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
-play music "audio/pasos.mp3"
+play music "audio/pasos.mp3" fadeout 1
 "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
 
 scene bg interior_del_bar with fade
-stop music
+stop music fadeout 1
 
 "En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
 
@@ -80,7 +80,9 @@ show drakos at right
 Drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, diles cómo robarías tú la piedra!"
 
 show conan at left
-play music "audio/Tension.mp3"
+
+$ renpy.music.set_volume(0.2, channel='music')
+play music "audio/Tension.mp3" fadeout 1
 Conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
 
 Drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
@@ -104,7 +106,7 @@ show conan at center
 Conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
 stop music
 
-play music "audio/espadacortando.mp3"
+play sound "audio/espadacortando.mp3"
 "Con un solo movimiento, Conan separa la cabeza del cuerpo de Drakos."
 stop music
 
@@ -128,10 +130,8 @@ Conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañ
 hide conan
 "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
 
-
-
 scene bg Calledezamora with fade
-play music "audio/ambiente relajada de una ciudad.mp3"
+play music "audio/ambiente relajada de una ciudad.mp3" fadeout 1
 
 show drakos at left
 Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
