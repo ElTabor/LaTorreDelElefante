@@ -578,11 +578,11 @@ label recamara_de_yag_kosha:
 scene int recamara de Yag Kosha
 
 "Conan entra sigilosamente en una habitación lujosa y exótica, llena de jade y marfil, con un ídolo extraño y aterrador en el centro. El ídolo tiene un cuerpo humanoide verde y una cabeza de pesadilla con colmillos de elefante."
-
+show yagkosha at left
 yagKosha "¿Quién anda ahí? ¿Has venido a torturarme de nuevo, Yara? ¿No te vas a cansar nunca?"
 
 "Las lágrimas ruedan por sus mejillas, Conan observa las extremidades torturadas de Yag Kosha y siente una profunda compasión por su sufrimiento."
-
+show conan at right
 Conan "No soy Yara. Soy solamente un ladrón. No te haré daño."
 
 yagKosha "Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo."
@@ -592,9 +592,11 @@ yagKosha "Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo 
 Conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
 
 yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
+hide yagkosha
 
+hide conan
 "Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. Conan lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
-
+show yagkosha at left
 yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
 
 yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara."
@@ -602,33 +604,37 @@ yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascen
 yagKosha "Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
 "Conan vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
-"Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo. Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
-
+yagKosha "Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo. Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
+show conan at right
 Conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
 
 yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
-
+hide yagkosha
+hide conan
 "Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. Conan lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
-
+show yagkosha at center
 yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
 yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara. Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro."
 yagKosha "Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
 yagKosha "Ahora viene la gran magia. Corta mi corazón y deja que la sangre fluya sobre la piedra. Luego baja a la habitación de Yara, pronuncia su nombre y entrégale la gema. Dile: '¡Atento, viajero del destino! Yag Kosha, el guardián de los arcanos olvidados, se digna a ofrecerte su último y más formidable conjuro.'"
-yagKosha"Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
-
+yagKosha "Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
+hide yagkosha
+hide conan
 "Conan se acerca con gesto vacilante, y Yag Kosha le indica dónde debía clavar la hoja. Conan aprieta los dientes y hunde profundamente la espada. La sangre fluye, empapando la hoja y su mano, y la criatura se agita antes de quedar inmóvil."
 "Conan, asegurándose de que ya no estaba vivo, extrae lo que parece ser el corazón de Yag Kosha, aunque es distinto a cualquier corazón que hubiera visto. Aprieta la víscera sobre la joya, y sorprendentemente, la sangre fue absorbida por la gema. Con cuidado, Conan sale del recinto y baja por la escalera de plata."
 "Siente que el cuerpo de Yag Kosha está sufriendo una transmutación detrás de él, algo que no debe presenciar. Al llegar a la puerta de ébano con la calavera de plata, la abre y ve a Yara, el brujo, en su lecho de seda negra, bajo los efectos del loto amarillo."
 
+show conan at left
 Conan "¡Yara! ¡Despierta!"
 
 "Los ojos se abren al instante y se vuelven fríos y crueles como los de un buitre. La negra figura vestida de seda se yergue lúgubre sobre el cimmerio."
-
+show yara at right
 Yara "¡Perro! ¿Qué haces aquí?"
 
 "Conan deposita la joya sobre la enorme mesa de ébano."
 
+hide yara
 Conan "El que envía esta gema me mandó decir:"
 
 menu :
@@ -639,7 +645,8 @@ menu :
 
 
 label Conan_recita_mal_el_hechizo:
-
+hide conan 
+show yara at center
 Yara "JAJAJA!Eso es todo lo que tienes? Un conjuro que ni siquiera funciona?" 
 
 "Conan, confundido por lo sucedido, decide huir. Pues a pesar de su fuerza, Yara es claramente más poderoso."
@@ -655,17 +662,17 @@ Yara "Crees que puedes cometer tal intrusión y te dejara escapar como si nada h
 Yara "Que pena… siempre creí que quien logre irrumpir en mi torre sería al menos un buen combatiente."
 
 "Con otro chasquido de la mano de Yara, Conan desaparece como si se tratara de la luz al anochecer."
-
+hide yara 
 jump fin_de_la_partida
 
 
 label Conan_recita_bien_el_hechizo:
-
+hide conan
 "Yara retrocede con el rostro pálido mientras la joya, antes cristalina, emite humo de colores cambiantes. Hipnotizado, Yara toma la gema y comienza a encogerse ante los ojos de Conan, primero pareciendo un gigante, luego un niño y finalmente un ser diminuto que corre sobre la mesa aferrando la joya."
 "Yara intenta escapar, pero sigue encogiéndose hasta que la joya parece una montaña a su lado, siendo finalmente atraído hacia ella."
-
+show yara at center
 Yara "En nombre de Yikk, te maldigo! ¿Cómo te atreves?"
-
+hide yara
 "Conan ve en el centro de la gema a una figura alada con cuerpo de hombre y cabeza de elefante, el vengador de Yag Kosha, que persigue a Yara. La joya explota en un destello iridiscente y desaparece, dejando la mesa de ébano y el lecho de mármol vacíos."
 
 menu : 
@@ -686,10 +693,14 @@ label escapa_por_soga:
 "Conan atraviesa el mismo camino por el que entró. Cuando llega al cuarto donde combatió a la araña ve el cuerpo frío de Taurus."
 
 if Conan_esta_solo == True:
+    show conan at center
     Conan "Te irás al infierno maldito. Esta torre te sepultará, será tu propia tumba"
+    hide conan 
 else:
+    show conan at left
     Conan "Lo lamento, compañero. Mi misión a cambiado y no he podido completar tu plan."
-
+    hide conan 
+    
 "Conan llega al balcón."
 
 menu :
@@ -700,28 +711,29 @@ menu :
 
 
 label Conan_revisa_la_soga:
-
+show conan at center
 Conan "Que raro, la soga está floja, la ajuste lo suficiente para poder bajar sin ningún problema de esta torre."
-
+hide conan
 "La soga, firme y bien anudada, soporta su peso sin ceder ni un ápice. Los músculos de Conan se tensan con cada movimiento, pero sus manos expertas se deslizan con precisión sobre la cuerda, controlando el ritmo de su descenso."
 "Siente el tirón familiar en los brazos, pero no es nada a lo que su cuerpo curtido no esté acostumbrado. Sus pies tocan la pared del edificio ocasionalmente, pero no pierde el control."
 "El guerrero desciende como una sombra, ágil y silencioso, su mirada clavada en el suelo que se aproxima rápidamente. Con un último impulso, Conan aterriza en el empedrado del callejón, flexionando sus rodillas para amortiguar el impacto. No hay pausa en sus movimientos; inmediatamente se pone en pie y suelta la soga sin mirar atrás."
-
+show conan at center
 Conan "Suerte que he revisado y ajustado la soga porque si no estaría compartiendo el mismo destino que mi compañero."
-
+hide conan
 jump Conan_llega_a_PB
 
 
 label Conan_no_revisa_la_soga:
-
+show conan at center
 Conan "Tengo que irme rápido sin perder mucho tiempo en revisar si la soga está bien ajustada o no."
 
 "Conan huye, descendiendo rápidamente por la soga que habían tirado Taurus hacia el balcón cuando tenían que subir. Pero a mitad del descenso, algo cambia. La soga, tensa en un principio, comienza a ceder hasta el punto de que se suelta de donde estaba agarrada, por lo que Conan empieza a caer hasta el suelo"
 " Por suerte no estaba tan alto, pero aun así quedó medio dolorido tras la caída."
-
+hide conan
 $ Conan_esta_herido = True
+show conan at center 
 Conan "AAAAH!!! Maldita sea qué suerte tengo, por poco casi me mato, tenía que haber revisado la soga antes, pero aun así sigo vivo pero un poco dolorido."
-
+hide conan
 
 label Conan_llega_a_PB:
 "Sale por una puerta de plata hacia los jardines, donde la brisa del alba lo estremece."
@@ -735,11 +747,11 @@ else:
 label Conan_no_logra_escapar:
 
 "Conan estando herido, le está costando escapar de la torre del elefante, La torre empieza a temblar y Conan intenta apresurarse."
-
+show conan at center
 Conan "Maldita sea, tengo que ser rápido sino no llegaré a escapar de esta torre del infierno. AAAAH!!!"
 
 "La torre comienza a derrumbarse con Conan dentro."
-
+hide conan
 if Conan_mata_a_Drakos:
     jump Conan_muere_aplastado
 else:
@@ -749,9 +761,9 @@ else:
 label Conan_muere_aplastado:
 
 "Conan, herido y exhausto, apenas logra mantenerse en pie mientras la torre del elefante se tambalea violentamente, sus paredes desmoronándose alrededor de él."
-
+show conan at center
 Conan "Maldita sea... tengo que salir de aquí... o este será mi final. ¡AAAH!"
-
+hide conan
 "La torre se derrumba por completo, y Conan, atrapado bajo los escombros, no puede escapar. La enorme estructura cae sobre él, aplastando bajo su peso. En sus últimos momentos, sus pensamientos se desvanecen entre la oscuridad y el eco de la destrucción."
 "El polvo se asienta lentamente, y el imponente guerrero conocido como Conan encuentra su fin bajo las ruinas de la torre del elefante, su destino sellado en las profundidades de la noche."
 
@@ -761,13 +773,14 @@ jump fin_de_la_partida
 label Drakos_salva_a_Conan:
 
 "Pareciendo que Conan muere definitivamente hasta que aparece Drakos en el momento justo para salvarlo y no morir aplastado por la torre."
-
+show conan at left
 Drakos "Maldición Conan, suerte que he llegado en el momento justo para poder rescatarte. No he olvidado nuestra conversación al venir aquí hace unas cuantas horas y también por no haberme matado en el bar, y por eso vengo a ayudarte."
-
+show conan at right
 Conan "Muchas gracias… Drakos por haberme salvado, te debo una enorme. Ahora vayámonos de aquí rápidamente antes de que venga una multitud a ver qué pasa."
 
 "A medida que se iban, tanto Conan como Drakos observaron como la torre se empieza a convertir en una inmensa nube de minúsculas partículas resplandecientes en que ambos se miran muy confundidos y al mismo tiempo muy asombrados por lo que acababa de pasar."
-
+hide drakos
+hide conan
 jump fin_de_la_partida
 
 label Conan_logra_escapar:
