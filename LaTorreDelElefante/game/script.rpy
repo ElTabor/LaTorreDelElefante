@@ -2,11 +2,11 @@
 
 # Declara los personajes usados en el juego como en el ejemplo:
 
-define Conan = Character("Conan", color = "#e9c33c")
+define Conan = Character("CONAN", color = "#e9c33c")
 define Drakos = Character("DRAKOS", color = "#0a0a0a")
 define Taurus = Character("TAURUS", color = "#643523")
 define ladrón = Character("LADRÓN", color = "#0a0a0a")
-define YagKosha = Character("YAG KOSHA", color = "#91ef91")
+define yagKosha = Character("YAG KOSHA", color = "#91ef91")
 define Yara = Character("YARA", color = "#981723")
 
 default Conan_esta_solo = False
@@ -17,11 +17,11 @@ default Conan_mata_a_Drakos = False
 label start:
 
 scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
-
+play music "audio/pasos.mp3"
 "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
 
 scene bg interior_del_bar with fade
-
+stop music
 
 "En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
 
@@ -33,53 +33,54 @@ Drakos "¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por
 hide drakos
 "Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la manga de su túnica y se da vuelta con el entrecejo fruncido para ver a un hombre alto y corpulento"
 
-show Conan at right
+show conan at right
 Conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre.¿Cuál es su secreto?"
 
 show drakos at left
 Drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí."
 
-hide Conan
+hide conan
 hide drakos
 
 show ladrón at center
 ladrón "No nos gustan los forasteros."
 
 hide ladrón
-show Conan at left
+show conan at left
 
 Conan "Soy Cimerio…"
 show drakos at right
 Drakos "No me sorprende, los cimerios son vulgares. Pero hasta el más tonto de su tipo conocen la leyenda de la torre."
 
-hide Conan
+hide conan
 hide drakos
 "A pesar de que el muchacho no tiene una actitud amenazante, Drakos, bajo los efectos del alcohol y la aprobación de su gente, se llena de valor y lo confronta."
 
 show drakos at right
 Drakos "¿El secreto de la Torre del Elefante? Bueno, cualquier imbécil sabe que el sacerdote Yara vive allí con la enorme joya llamada Corazón de Elefante; ese es el secreto de su magia."
 
-show Conan at left
+show conan at left
 Conan "Yo he visto esa torre. Está en un enorme jardín situado en lo alto de la ciudad y rodeado de elevadas murallas. No he visto guardias. Las murallas parecían fáciles de escalar. ¿Por qué nadie ha robado esa misteriosa piedra preciosa?"
-hide Conan
+hide conan
 Drakos "¡Escuchen a este pagano salvaje!¡Pretende robar la joya de Yara!"
 Drakos "Entonces presta atención y aprende, muchacho. Debes saber que en Zamora, y especialmente en esta ciudad, hay más intrépidos ladrones que en cualquier otro lugar del mundo, incluido Koth."
 Drakos "Si algún mortal hubiera sido capaz de robar la piedra preciosa, puedes estar seguro de que habría desaparecido hace mucho tiempo. Tú hablas de escalar las murallas, pero una vez que lo hubieras hecho, desearías irte inmediatamente."
 Drakos "Por la noche no hay guardias, es decir, guardias humanos, en los jardines por una buena razón."
 Drakos "Pero en el cuarto de guardia, en la parte inferior de la torre, hay hombres armados, y aun si lograras escabullirte entre los que rondan por los jardines de noche, tendrías que eludir a los soldados, porque la gema está guardada en algún lugar de la parte superior de la torre."
-show Conan
+show conan
 Conan "Pero si alguien consiguiera atravesar los jardines, ¿por qué no iba a poder llegar hasta la gema por la parte superior de la torre, eludiendo de ese modo a los soldados?"
 
 Drakos "¡Oíd lo que está diciendo! ¡Este bárbaro debe de ser un águila capaz de volar hasta el borde enjoyado de la torre, que se halla a tan solo cincuenta metros de altura, y que tiene las paredes más lisas y resbaladizas que el cristal pulido!"
 
-hide Conan
+hide conan
 hide drakos
 "Conan, molesto por las carcajadas burlonas de los oyentes y confundido por la falta de cortesía de los locales. Piensa en salir corriendo del lugar pero Drakos continúa con su mofa."
 
 show drakos at right
 Drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, diles cómo robarías tú la piedra!"
 
-show Conan at left
+show conan at left
+play music "audio/Tension.mp3"
 Conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
 
 Drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
@@ -97,15 +98,17 @@ menu Matar_a_Drakos:
 
 label matar_a_Drakos:
 scene bg matar_Drakos_escena with fade 
-show Conan at center
+show conan at center
+
+
 Conan "¿Te atreves a pedirme piedad luego de haberme faltado el respeto?"
+stop music
 
-
-
+play music "audio/espadacortando.mp3"
 "Con un solo movimiento, Conan separa la cabeza del cuerpo de Drakos."
+stop music
 
-
-hide Conan
+hide conan
 
 scene bg exterior_calle_Arenjun__Zamora_Noche with fade
 "La taberna queda atrás mientras Conan avanza sigilosamente por las calles desiertas, dirigiéndose hacia la Torre del Elefante."
@@ -120,20 +123,20 @@ label perdonar_a_Drakos:
 scene perdonar_Drakos_escena 
 scene bg interior_bar with fade
 
-show Conan at center
+show conan at center
 Conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañándome hacia la torre. Levántate."
-hide Conan
+hide conan
 "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
 
 
 
 scene bg Calledezamora with fade
-
+play music "audio/ambiente relajada de una ciudad.mp3"
 
 show drakos at left
 Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
 
-show Conan at right
+show conan at right
 Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
 
 Conan "¿Por qué?"
@@ -153,10 +156,10 @@ Drakos "Como digas… hasta aquí llego yo. Ya cumplí mi deuda?"
 Conan "Así es. Gracias por la compañía."
 
 hide drakos
-hide Conan
-
+hide conan
+stop music
 "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
-"A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"
+"A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"    
 
 label Conan_llega_a_la_torre:
 scene exterior_jardinesDeLaTorre
@@ -310,57 +313,51 @@ Conan "¡Murieron sin lanzar un solo rugido! Taurus, ¿qué era ese polvo?"
 
 
 scene bg JardinesDeLaTorre with fade
-play music "ambient_forest.mp3" fadein 2.0
-show Taurus at left with moveinleft
+show Taurus at left
 
 Taurus "Están hechas con flores de loto negro, que crecen en las selvas remotas de Khitai, donde solo habitan los monjes de cráneo amarillo de Yun. Esas flores causan la muerte al que las huele."
 
 "Conan se arrodilla al lado de los enormes animales muertos, asegurándose de que no podían hacerle daño. Mueve la cabeza pensando que la magia de las tierras exóticas es terrible y misteriosa a los ojos de los bárbaros del norte."
 
-show Conan at right with moveinright
+show Conan
 Conan "¿Por qué no matamos a los soldados de la torre de la misma manera?"
 
-show Taurus with dissolve
+show Taurus
 Taurus "Porque ese es todo el polvo que tengo. Su obtención fue una hazaña que hubiera bastado para hacerme famoso entre todos los ladrones del mundo. Lo robé de una caravana que se dirigía a Estigia. ¡Pero, vamos ya, por Bel! ¿Vamos a pasarnos toda la noche hablando?"
 
-scene bg BaseDeLaTorre with fade
-stop music fadeout 1.0
-play music "suspense_theme.mp3" fadein 2.0
+scene bg BaseDeLaTorre with dissolve
 "Taurus y Conan se arrastran silenciosamente hasta la base de la torre. Sin decir una palabra, Taurus desenrolla una cuerda con un gancho de acero en uno de sus extremos."
 
-"¿En que lado de la torre tira Taurus el gancho?"
+"¿En que lado de la torre tira Taurus el gancho?."
 
-menu:
+menu :
     "Lado derecho":
         jump derecho
     "Lado izquierdo":
         jump izquierdo
 
 label derecho:
-scene bg BaseDeLaTorre with dissolve
+scene bg BaseDeLaTorre
 show Conan
 Conan "Lánzalo en el lado derecho, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
 "Aun así, el bárbaro siente una inquietud inexplicable, tal vez por el fuerte olor de los leones que domina el aire."
-play sound "rope_throw.mp3"
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
-show Taurus with dissolve
+show Taurus
 Taurus "¡Buen ojo! Ahora..."
 
-show ConanAlerta with vpunch
-play sound "lion_roar.mp3"
+show ConanAlerta
 "El instinto salvaje de Conan lo hace reaccionar de inmediato, ya que la muerte silenciosa acecha desde arriba. Con una sola mirada, el cimmerio percibe la gigantesca sombra de un león, listo para atacar."
-    
 scene ConanVsLeon
 "Ningún hombre civilizado es tan rápido como el bárbaro. Su espada, brillando bajo las estrellas, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
-
 scene TaurusViendoAlLeonEncimaDeConan
 "Taurus, maldiciendo para sus adentros, se agacha y ve a Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal yace muerto, con el cráneo partido. Con su ayuda, Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
 
-scene bg LeonMuerto with fade
-show Taurus at right with moveinleft
+scene bg LeonMuerto
+
+show Taurus at right
 Taurus "¿Estás herido, amigo?"
 
 show Conan at left
@@ -368,28 +365,30 @@ Conan "¡Por Crom, no! Pero me libre por poco. ¿Por qué esa maldita bestia no 
 jump continuacion
 
 label izquierdo:
-scene bg BaseDeLaTorre with dissolve
+scene bg BaseDeLaTorre
 show Conan
 Conan "Lánzalo en el lado izquierdo, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
 "Aun así, el bárbaro siente una inquietud inexplicable, tal vez por el fuerte olor de los leones que domina el aire."
-play sound "rope_throw.mp3"
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
 show Taurus
 Taurus "¡Buen ojo! Ahora debemos subir con cuidado"    
 
-show ConanDolorido with vpunch
-play sound "lion_roar.mp3"
 "El instinto salvaje de Conan lo hace reaccionar con mucha ansiedad y reacción rápido, ya que la muerte silenciosa acecha dentro de los jardines."
-    
-scene ConanVsLeon1
+"Apurado, intenta subir rápido pero no logra ver al león que lo está acechando."
+scene ConanVsLeon
+$ Conan_esta_herido = True
 "Intenta desenvainar su espada, pero el enorme felino es mucho más rápido, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
-    
-scene bg BaseDeLaTorre with dissolve
+"Taurus, maldiciendo para sus adentros, se agacha y ve a  Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal logra masticar el costado de la costilla izquierda de Conan."
+"Luego el bárbaro logra sacar su espada y gracias a la adrenalina que surge dentro de su ser logra clavarle la espada en la parte de atrás del cuello del león y así provocar su muerte."
+"Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
+
+scene bg BaseDeLaTorre
+
 show TaurusPreocupado
-Taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre. ¿Estas bien Conan?"
+Taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre.¿Estas bien Conan?"
 
 show ConanDolorido
 Conan "Si, no te preocupes por mí. Sigamos a lo que vinimos, entremos a la torre. No hay tiempo que perder."
@@ -400,59 +399,53 @@ label continuacion:
 show Taurus at right
 Taurus "Todo es extraño en este jardín. Los leones atacan en silencio, al igual que las otras muertes. Pero sigamos; aunque hemos hecho poco ruido en la pelea, los soldados pueden haber oído algo, a menos que estén dormidos o borrachos."
 Taurus "Esa fiera está en alguna otra parte del jardín y escapa de la muerte de las flores, pero seguramente ya no hay más animales. Ahora debemos trepar por esta cuerda; imagino que no es necesario preguntar a un cimmerio si puede hacerlo."
-    
-show Conan at left with dissolve
-Conan "Si resiste mi peso..."
+
+show ConanDolorido at left
+Conan "Si resiste mi peso."
 
 Taurus "Puede aguantar tres veces mi propio peso. Está hecha con trenzas de mujeres muertas, que yo mismo cogí de sus tumbas a medianoche, y que luego sumergí en la mortífera savia del árbol de upas, para hacerlas resistentes."
 Taurus "Yo subiré primero, y luego me seguirás tú de cerca."
 
-scene bg ConanYTaurusEscalando with fade
+scene bg ConanYTaurusEscalando
+
 "El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
 "Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
-    
-scene bg ciudadDeFondo with fade
+
+scene bg ciudadDeFondo
 "En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio."
 
-scene bg bordeDeLaTorre with dissolve
+scene bg bordeDeLaTorre
 "Finalmente, Taurus extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado. Conan, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodean y que brillan como estrellas incrustadas en un cielo de plata."
 "Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
-    
+
 show Conan at left
 Conan "Aquí hay una fabulosa fortuna, Taurus."
 
 show Taurus at right
 "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
-    
+
 scene bg laTorreFondoCiudad
 "Conan trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
 "Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas."
-    
-scene bg puertaDeOro with dissolve
-"La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
-
-show Taurus at left
-"Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
-    
-scene bg dentroTerraza with dissolve
-"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro."
-
+scene bg puertaDeOro
+"La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."    
+scene bg laTorreFondoCiudad
+"Conan dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a Taurus, quien está recogiendo la cuerda."
+"El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
 
 scene bg puertaDeOro
+show Taurus at left
+"Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
 
-#Comienzo de seba
-$ renpy.music.set_volume(0.4, channel='music')
-
-play music "musicaDeMisterio.mp3"
+scene bg dentroTerraza
+"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
 
 scene bg puertaDeOro
 show Taurus at right
-
-Taurus "Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
+"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
 
 hide Taurus
 "Conan piensa por dentro"
-
 show Conan
 "¿Debo dejar que cruce solo esa puerta?"
 
@@ -464,102 +457,54 @@ menu CONFIAR_EN_Taurus:
         jump entra_solo_Taurus
 
 label entrar_con_Taurus:
-
 show Conan at left
-
-Conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda"
-
+"No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda"
 show Taurus at right
+"De acuerdo. Quédate cerca."
 
-Taurus"De acuerdo. Quédate cerca."
-
-$ renpy.music.set_volume(0.25, channel='sound')
-play music "concrete-footsteps-6752.mp3" fadeout 1
-
-scene bg puertaDeOro
+scene puertaDeOro
 "A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
 
 show Conan
+"Taurus, cuidado!"
 
-play music "radakan-dramaticevent.mp3" fadeout 1
-
-Conan "Taurus, cuidado!"
-hide Conan
-
-show Taurus
 Taurus "Aaagh! Diablos! ¿Qué es esta cosa?"
 
 "Una pegajosa sustancia cubre a Taurus. Pegándolo al suelo e inmovilizándolo."
-
-show Conan at left
 
 Conan "Por Crom! ¿De dónde vino eso?"
 
 "Nuevamente, el instinto bárbaro de Conan salva al cimmerio de un nuevo ataque. Una enorme araña intenta embestir desde atrás. Al fallar, la araña continúa hacia Taurus."
 
-show Arania right
-
-play sound "Sonido-Dealerta.mp3"
-
 Conan "¡NOOO!"
 
 "La araña toma a Taurus por el cuello con sus colmillos y le arrancó la cabeza de un tirón."
 
-hide Taurus
-
 Conan "Maldita! ¡Las pagarás!"
-
-play sound "20-pasos-nina-ver1-67856.mp3"
 
 "La araña carga hacia Conan nuevamente."
 
-
 jump Conan_pelea_con_la_araña
-
 
 
 #Taurus entra solo
 label entra_solo_Taurus:
 
-scene bg puertaDeOro
-
-show Conan at left
 Conan "Está bien, fijate que hay dentro de ese cuarto."
-
-show Taurus 
 
 Taurus "De acuerdo."
 
-play music "concrete-footsteps-6752.mp3" fadeout 1
-
-hide Conan
-
-
-"El ladrón abre la puerta y se adentra en la habitación"
-
-stop music fadeout 1
-
-"Esta es oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
+"El ladrón abre la puerta y se adentra en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
 
 Taurus "Diablos… parece que hasta aquí llegas, cimerio…"
 
 "Taurus sale del cuarto"
 
-show Conan at left
-
 Taurus "Es seguro, pasa."
-
-
-$ renpy.music.set_volume(0.15, channel='sound')
-play sound "Door_Slam.mp3"
-$ renpy.music.set_volume(0.25, channel='sound')
-
-play music "radakan-dramaticevent.mp3" fadeout 1
 
 "Sin pensarlo mucho, Conan se adentra en el cuarto solo para escuchar un fuerte portazo detrás de él."
 
 Taurus "Debo reconocer que eres muy hábil, bárbaro! Pero te vendría bien un poco de viveza."
-
 
 Conan "Maldito! ¡Déjame salir!"
 
@@ -567,22 +512,11 @@ Taurus "Lo siento, Conan. No puedo hacer eso si quiero quedarme con la gema. ¡S
 
 Conan "¡NO! Abre Taurus, cobarde. ¡Me las vas a pagar!"
 
-hide Conan 
-hide Taurus
-
-show Conan
-
 "El cimmerio siente como algo cae lentamente del techo, y al darse vuelta ahí la ve. Una enorme araña que vigila la entrada al cuarto de la gema."
-
-show Arania at right
-
-play sound "SonidodeArania.mp3"
 
 "¡Maldita sea! Tendremos que enfrentarnos, asqueroso insecto."
 
 label Conan_pelea_con_la_araña:
-
-stop music fadeout 1
 
 menu cómo_atacar_a_la_araña:
     "Atacar de frente":
@@ -591,17 +525,10 @@ menu cómo_atacar_a_la_araña:
         jump Lanzar_espada
 
 label De_frente:
-
-show Conan 
-show Arania
-
-play sound "Desenvainar_Espada.mp3"
-
+ 
 "Conan empuña su espada y ataca a la araña de frente."
 
 Conan "¡AAAAH!"
-
-play sound "Corte de Espada.mp3"
 
 "Justo antes de alcanzarla, el bárbaro se desliza por debajo de ella y la apuñala en el pecho. La araña se desploma y Conan se acerca para recuperar su espada."
 
@@ -612,25 +539,13 @@ else:
 
 label espera_Taurus:
 
-hide Conan
-hide Arania
-scene puertaDeOro
-
-show Taurus
-
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
 Taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
-play sound "Door_Slam.mp3"
-
 "Al abrir las puertas ve el cuerpo de la araña en una posición postmortem y ni bien entra siente unos pasos acercándose cada vez más rápido hacia él."
 
-show Conan at left
-
 Conan "¡Te dije que me las ibas a pagar, ladrón malnacido!"
-
-play sound "Corte de Espada.mp3"
 
 "Sin ningún tipo de tapujo Conan corre hacia Taurus y le corta el cuello de una manera limpia dejando que se muera ahogado en su sangre."
 
@@ -638,24 +553,12 @@ jump recamara_de_yag_kosha
 
 label Lanzar_espada:
 
-scene puertaDeOro
-
-show Conan
-show Arania at right
-hide Taurus
-
 "Conan esquiva a la araña con mucha agilidad. En sus movimientos, nota que en el medio del cuarto hay un candelabro gigante y se le viene un plan a la cabeza."
 
 Conan "Asquerosa araña, ven ¡Atácame!"
 
-play sound "Wind_Cut.mp3"
 "La araña se va encima del bárbaro sedienta de sangre y con violencia. Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga."
-
-
 "Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de Conan para atacar su cuello y romperlo."
-
-hide Conan
-hide Arania
 
 if Conan_esta_solo == True :
     jump espera_Taurus_Conan_M #409
@@ -664,20 +567,11 @@ else:
 
 label espera_Taurus_Conan_M:
 
-scene puertaDeOro
-
-show Taurus
-
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
 Taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
-play sound "Door_Slam.mp3"
-
-show Arania at right
-
 "Taurus abre las puertas y ve el cuerpo de Conan tirado en el medio del cuarto. Confiado se fue acercando de a poco hasta percatarse de que tiene el cuello roto, asustado se da media vuelta para salir corriendo de la habitación pero ya era demasiado tarde"
-play sound "SonidodeArania.mp3"
 "la araña lo captura con su tela lo deja colgado en el cuarto y aprovecha para devorarlo poco a poco comenzando con su cabeza."
 
 label Muerte:
@@ -688,40 +582,45 @@ jump fin_de_la_partida
 label recamara_de_yag_kosha:
 scene int recamara de Yag Kosha
 
-show Conan
-
 "Conan entra sigilosamente en una habitación lujosa y exótica, llena de jade y marfil, con un ídolo extraño y aterrador en el centro. El ídolo tiene un cuerpo humanoide verde y una cabeza de pesadilla con colmillos de elefante."
 
-show YagKosha at left
-
-play sound "ChoirSoundEffect.mp3"
-
-YagKosha "¿Quién anda ahí? ¿Has venido a torturarme de nuevo, Yara? ¿No te vas a cansar nunca?"
+yagKosha "¿Quién anda ahí? ¿Has venido a torturarme de nuevo, Yara? ¿No te vas a cansar nunca?"
 
 "Las lágrimas ruedan por sus mejillas, Conan observa las extremidades torturadas de Yag Kosha y siente una profunda compasión por su sufrimiento."
 
 Conan "No soy Yara. Soy solamente un ladrón. No te haré daño."
 
-YagKosha "Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo."
+yagKosha "Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo."
  
-YagKosha "Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
+yagKosha "Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
 
 Conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
 
-YagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
+yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
 
 "Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. Conan lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
 
-YagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
+yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
 
-YagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara. Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro."
+yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara."
 
-YagKosha "Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
+yagKosha "Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro. Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
 
-YagKosha "Ahora viene la gran magia. Corta mi corazón y deja que la sangre fluya sobre la piedra. Luego baja a la habitación de Yara, pronuncia su nombre y entrégale la gema. Dile: '¡Atento, viajero del destino! Yag Kosha, el guardián de los arcanos olvidados, se digna a ofrecerte su último y más formidable conjuro.'"
-YagKosha"Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
+"Conan vuelve hacia el altar de oro y marfil que le ha señalado el extraño ser y coge una enorme joya redonda, clara como un cristal carmesí, y en ese momento descubre que es el Corazón del Elefante."
+"Tú no perteneces a la raza maligna de Yara. Llevas la marca de la fiereza pura y esbelta de las tierras desérticas. Conozco a tu gente desde antiguo. Los conozco con otro nombre hace mucho, mucho tiempo, cuando un mundo distinto alzaba sus brillantes torres hacia las estrellas. Pero... hay sangre en tus manos."
 
-#Fin de la parte Seba
+Conan "Es de la araña que había en la habitación de arriba y de uno de los leones del jardín."
+
+yagKosha "¡Así es! Muerte en todas partes; lo sé; lo siento. Y la siguiente producirá un efecto mágico que ni el mismo Yara imagina. ¡Oh, hechizo de la liberación, dioses verdes de Yag!"
+
+"Las lágrimas corren por las mejillas de la criatura mientras se estremece bajo intensas emociones. Conan lo observa perplejo hasta que el ser cesa de temblar y sus ojos ciegos se vuelven hacia él, haciéndole una seña."
+
+yagKosha "Escúchame, hombre. Sé que te parezco repugnante y monstruoso, pero tú me parecerías igual de extraño. No soy ni un dios ni un demonio; soy de carne y hueso, aunque diferente. Vengo de Yag, un planeta verde en los confines del universo. Fuimos exiliados de nuestro mundo tras una derrota."
+yagKosha "Aquí en la Tierra, nuestras alas se marchitaron. Hemos visto el ascenso y la caída de civilizaciones, desde Valusia hasta Atlantis y Lemuria. Ahora, yo soy el último de mi raza, esclavizado por Yara. Al principio, Yara aprendía de mi magia blanca, pero él ansiaba poder oscuro."
+yagKosha "Me engañó para que revelara secretos prohibidos, y me esclavizó. He soportado trescientos años de tormento, obligado a realizar sus malvados deseos. Ahora presiento mi final. Tú eres la mano del destino. Coge la piedra en el altar."
+
+yagKosha "Ahora viene la gran magia. Corta mi corazón y deja que la sangre fluya sobre la piedra. Luego baja a la habitación de Yara, pronuncia su nombre y entrégale la gema. Dile: '¡Atento, viajero del destino! Yag Kosha, el guardián de los arcanos olvidados, se digna a ofrecerte su último y más formidable conjuro.'"
+yagKosha"Después, márchate. Mi muerte no es como la tuya; seré libre nuevamente."
 
 "Conan se acerca con gesto vacilante, y Yag Kosha le indica dónde debía clavar la hoja. Conan aprieta los dientes y hunde profundamente la espada. La sangre fluye, empapando la hoja y su mano, y la criatura se agita antes de quedar inmóvil."
 "Conan, asegurándose de que ya no estaba vivo, extrae lo que parece ser el corazón de Yag Kosha, aunque es distinto a cualquier corazón que hubiera visto. Aprieta la víscera sobre la joya, y sorprendentemente, la sangre fue absorbida por la gema. Con cuidado, Conan sale del recinto y baja por la escalera de plata."
