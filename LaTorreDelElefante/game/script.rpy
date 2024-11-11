@@ -128,7 +128,7 @@ label perdonar_a_Drakos:
     
     
     scene bg Calledezamora with fade
-    play music "audio/ambiente relajada de una ciudad.mp3"
+    
     
     show drakos at left
     Drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
@@ -152,15 +152,14 @@ label perdonar_a_Drakos:
 
     Conan "Así es. Gracias por la compañía."
 
-    "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
-    "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"
-
     
     hide drakos
     hide conan
     
     "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
     "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"
+    
+
 
 label Conan_llega_a_la_torre:
 scene exterior_jardinesDeLaTorre
