@@ -9,6 +9,16 @@ define ladrón = Character("LADRÓN", color = "#0a0a0a")
 define yagKosha = Character("YAG KOSHA", color = "#91ef91")
 define Yara = Character("YARA", color = "#981723")
 
+image fondo_calle = "images/Conan_1.png"
+image taurus = "images/Taurus.png"
+image Taurus = "images/Taurus.png"
+image Yara = "images/Yara.png"
+image Yara = "images/Yara.png"
+image conan = "images/ConandeFrente.png"
+image Conan = "images/ConandeFrente.png"
+image yagkosha = "images/Yag_Kosha.png"
+image YagKosha = "images/Yag_Kosha.png"
+
 default Conan_esta_solo = False
 default Conan_esta_herido = False
 default Conan_mata_a_Drakos = False
@@ -17,6 +27,7 @@ default Conan_mata_a_Drakos = False
 label start:
 
 scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
+show fondo_calle
 play music "audio/pasos.mp3" fadeout 1
 "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
 
