@@ -161,11 +161,25 @@ stop music
 "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
 "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"    
 
+
 label Conan_llega_a_la_torre:
-scene exterior_jardinesDeLaTorre
+scene bg jardinesDeLaTorre with fade
+
+show conan at center
 
 "En la distancia, Conan ve movimiento detrás de otros arbustos y decide correr hacia ellos empuñando su espada, listo para eliminar cualquier amenaza."
-"Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien. Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
+
+hide conan
+show corpse at center
+
+"Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien."
+
+hide corpse
+show taurus at right
+
+"Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
+
+show conan at left
 
 Taurus "Tú no eres soldado. Eres un ladrón, igual que yo."
 
@@ -236,6 +250,11 @@ Taurus "Entonces sígueme."
 
 Conan "No veo ninguna luz"
 
+hide conan
+hide taurus
+
+scene bg jardinesInternos with fade
+
 "La parte inferior de la torre se parece mucho a la parte que se ve desde fuera del jardín: un cilindro perfecto y brillante, que no parece tener ninguna abertura."
 
 Taurus "Hay puertas y ventanas hábilmente construidas. Pero están cerradas. Los soldados respiran el aire que viene de arriba."
@@ -243,11 +262,23 @@ Taurus "Hay puertas y ventanas hábilmente construidas. Pero están cerradas. Lo
 "El jardín es un vago conjunto de sombras cubiertas de pequeños árboles donde se balancean sombríamente en la oscuridad ligeros arbustos."
 "El cauto espíritu de Conan siente el aura amenazadora que se cierne sobre aquel lugar. Percibe la mirada ardiente de unos ojos invisibles y siente un aroma sutil que le eriza instintivamente el pelo de la nuca como a los sabuesos cuando huelen la presencia de su antiguo enemigo."
 
+show taurus:
+    xalign 0.7
+    yalign 1
+
 Taurus "Sígueme. Ven detrás de mí, si aprecias tu vida."
+
+show conan behind taurus:
+    xalign 0.95 
+    yalign 1
 
 "Taurus extrae de su cinto lo que parece ser un tubo de cobre, el nemedio se deja caer nuevamente encima del césped interior. Conan lo sigue de cerca con la espada preparada, pero Taurus lo empuja hacia atrás, contra la pared, y se queda inmóvil."
 "Está en una actitud de tensa expectación y su mirada, al igual que la de Conan, se fija en las sombras de los arbustos que hay cerca de allí. La mata se mueve a pesar de que la brisa deja de soplar."
 "En ese momento ven dos enormes ojos resplandecientes entre las ondulantes sombras y detrás de estos pueden ver otros destellos de fuego que centellean en la oscuridad."
+
+show lions:
+    xalign 0
+    yalign .75
 
 Conan "¡Leones!"
 
@@ -269,48 +300,12 @@ Taurus "¡Es la muerte! Si se levanta viento y sopla en nuestra dirección, tend
 "Finalmente quedan flotando solo unas tenues nubecillas amarillentas en el aire; cuando desaparecen, Taurus indica a su compañero con la mano que avance. Se dirigen sigilosamente hacia los arbustos y Conan se queda boquiabierto."
 "Tendidos en el suelo entre las sombras yacen cinco cuerpos de color pardo cuya mirada feroz se ha extinguido para siempre. Un olor dulzón y empalagoso persiste en el aire."
 
+hide lions
+
 Conan "¡Murieron sin lanzar un solo rugido! Taurus, ¿qué era ese polvo?"
 
-
-#comienzo de la pagina 25 a 32
-
-#"El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
-#"Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
-#"En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio. Finalmente, Taurus extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado."
-#"Conan, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodeaban. Diamantes, rubíes, esmeraldas, zafiros, turquesas y piedras de la luna brillan como estrellas incrustadas en un cielo de plata."
-#"Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
-
-#Conan "Aquí hay una fabulosa fortuna, Taurus."
-
-#Taurus "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
-
-#"Conan trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
-#"Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas. La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
-#"Conan dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a Taurus, quien está recogiendo la cuerda. El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
-
-#Taurus "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
-#"Ante el aviso de su compañero, Taurus voltea para ver a Conan apuntando con su mano sobre sus cabezas."
-
-#"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
-
-#"Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
-
-#menu CONFIAR_EN_Taurus:
- #   "Entrar con el":
-  #      $ Conan_esta_solo =False
-   #     jump entrar_con_Taurus
-    #"Dejer entrar solo a Taurus":
-     #   $ Conan_esta_solo =True
-        #jump entra_solo_Taurus
-
-#label entrar_con_Taurus:
-
-#Conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda."
-
-#Taurus "De acuerdo. Quédate cerca."
-
-#"A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
-
+hide taurus
+hide conan
 
 scene bg JardinesDeLaTorre with fade
 show Taurus at left
