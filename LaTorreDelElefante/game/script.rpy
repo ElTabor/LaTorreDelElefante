@@ -1,9 +1,4 @@
-﻿# Coloca el código de tu juego en este archivo.
-
-# Declara los personajes usados en el juego como en el ejemplo:
-
-#CHARACTERS
-
+﻿#CHARACTERS
 define conan = Character("CONAN", color = "#e9c33c")
 define drakos = Character("DRAKOS", color = "#0a0a0a")
 define taurus = Character("TAURUS", color = "#643523")
@@ -14,6 +9,22 @@ define Yara = Character("YARA", color = "#981723")
 #BACKGROUNDS
 image cityAlley = "CityAlley.jpg"
 image bar = "Fondo.jpg"
+image cityStreetDrakos = "Callesdezamora.jpg"
+image cityStreetAlone = "Callesdezamora.jpg"
+image jardinesInternos = "Fondo.jpg"
+image jardinesExternos = "Fondo.jpg"
+image ConanVSLeon = "Fondo.jpg"
+image TaurusViendoAlLeonEncimaDeConan = "Fondo.jpg"
+image LeonMuerto = "Fondo.jpg"
+image ConanYTaurusEscalando = "Fondo.jpg"
+image ciudadDeFondo = "Fondo.jpg"
+image cimaDeLaTorre = "Fondo.jpg"
+image puertaDeOro = "Fondo.jpg"
+image cuartoArania = "CuartoArania.png"
+image remacamaraYagKosha = "Fondo.jpg"
+image recamaraYara = "Fondo.jpg"
+image escaleras= "Fondo.jpg"
+image torreDerrumbandoseLejos = "Fondo.jpg"
 
 #CHARACTER SPRITES
 image Drakos = "Drakos.png"
@@ -161,7 +172,6 @@ scene cityAlley with fade
 jump Conan_llega_a_la_torre
 
 label perdonar_a_Drakos:
-scene perdonar_Drakos_escena 
 scene bar with fade
 
 show Conan at center
@@ -169,14 +179,14 @@ conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañ
 hide Conan
 "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
 
-scene bg Calledezamora with fade
+scene cityStreet with fade
 play music cityAmbience fadeout 1
 
 show Drakos at left
+
 drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
 
 show Conan at right
-drakos "Mi nombre es Drakos, por cierto. Aunque dudo que te importe."
 
 conan "¿Por qué?"
 
@@ -203,7 +213,7 @@ stop music
 #COMIENZO TOMÁS
 
 label Conan_llega_a_la_torre:
-scene bg jardinesDeLaTorre with fade
+scene jardinesExternos with fade
 
 show Conan at center
 
@@ -296,7 +306,7 @@ conan "No veo ninguna luz"
 hide Conan
 hide Taurus
 
-scene bg jardinesInternos with fade
+scene jardinesInternos with fade
 
 "La parte inferior de la torre se parece mucho a la parte que se ve desde fuera del jardín: un cilindro perfecto y brillante, que no parece tener ninguna abertura."
 
@@ -353,7 +363,7 @@ hide Conan
 #FIN TOMÁS
 #COMIENZO FER
 
-scene bg JardinesDeLaTorre with fade
+scene jardinesInternos with fade
 play music forestAmbience fadein 2.0
 show Taurus at left with moveinleft
 
@@ -367,7 +377,7 @@ conan "¿Por qué no matamos a los soldados de la torre de la misma manera?"
 show Taurus with dissolve
 taurus "Porque ese es todo el polvo que tengo. Su obtención fue una hazaña que hubiera bastado para hacerme famoso entre todos los ladrones del mundo. Lo robé de una caravana que se dirigía a Estigia. ¡Pero, vamos ya, por Bel! ¿Vamos a pasarnos toda la noche hablando?"
 
-scene bg BaseDeLaTorre with fade
+scene baseDeLaTorre with fade
 stop music fadeout 1.0
 play music suspense fadein 2.0
 "Taurus y Conan se arrastran silenciosamente hasta la base de la torre. Sin decir una palabra, Taurus desenrolla una cuerda con un gancho de acero en uno de sus extremos."
@@ -381,7 +391,7 @@ menu:
         jump izquierdo
 
 label derecho:
-scene bg BaseDeLaTorre with dissolve
+scene baseDeLaTorre with dissolve
 show Conan
 conan "Lánzalo en el lado derecho, veo una saliente allí."
 
@@ -397,14 +407,14 @@ show ConanAlerta with vpunch
 play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar de inmediato, ya que la muerte silenciosa acecha desde arriba. Con una sola mirada, el cimmerio percibe la gigantesca sombra de un león, listo para atacar."
     
-scene ConanVsLeon
+scene ConanVSLeon
 "Ningún hombre civilizado es tan rápido como el bárbaro. Su espada, brillando bajo las estrellas, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
 play sound swordCut2
 
 scene TaurusViendoAlLeonEncimaDeConan
 "Taurus, maldiciendo para sus adentros, se agacha y ve a Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal yace muerto, con el cráneo partido. Con su ayuda, Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
 
-scene bg LeonMuerto with fade
+scene LeonMuerto with fade
 show Taurus at right with moveinleft
 taurus "¿Estás herido, amigo?"
 
@@ -413,7 +423,7 @@ conan "¡Por Crom, no! Pero me libre por poco. ¿Por qué esa maldita bestia no 
 jump continuacion
 
 label izquierdo:
-scene bg BaseDeLaTorre with dissolve
+scene baseDeLaTorre with dissolve
 show Conan
 conan "Lánzalo en el lado izquierdo, veo una saliente allí."
 
@@ -429,10 +439,10 @@ show ConanDolorido with vpunch
 play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar con mucha ansiedad y reacción rápido, ya que la muerte silenciosa acecha dentro de los jardines."
     
-scene ConanVsLeon1
+scene ConanVsLeon
 "Intenta desenvainar su espada, pero el enorme felino es mucho más rápido, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
     
-scene bg BaseDeLaTorre with dissolve
+scene baseDeLaTorre with dissolve
 show TaurusPreocupado
 taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre. ¿Estas bien Conan?"
 
@@ -452,14 +462,14 @@ conan "Si resiste mi peso..."
 taurus "Puede aguantar tres veces mi propio peso. Está hecha con trenzas de mujeres muertas, que yo mismo cogí de sus tumbas a medianoche, y que luego sumergí en la mortífera savia del árbol de upas, para hacerlas resistentes."
 taurus "Yo subiré primero, y luego me seguirás tú de cerca."
 
-scene bg ConanYTaurusEscalando with fade
+scene ConanYTaurusEscalando with fade
 "El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
 "Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
     
-scene bg ciudadDeFondo with fade
+scene ciudadDeFondo with fade
 "En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio."
 
-scene bg bordeDeLaTorre with dissolve
+scene cimaDeLaTorre with dissolve
 "Finalmente, Taurus extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado. Conan, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodean y que brillan como estrellas incrustadas en un cielo de plata."
 "Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
     
@@ -468,27 +478,21 @@ conan "Aquí hay una fabulosa fortuna, Taurus."
 
 show Taurus at right
 "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
-    
-scene bg laTorreFondoCiudad
+
 "Conan trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
 "Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas."
     
-scene bg puertaDeOro with dissolve
+scene puertaDeOro with dissolve
 "La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
 
 show Taurus at left
 "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
-    
-scene bg dentroTerraza with dissolve
 "Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro."
 
 #FIN FER
 #COMIENZO SEBA
 
-scene bg puertaDeOro
 $ renpy.music.set_volume(0.4, channel='music')
-
-scene bg puertaDeOro
 show Taurus at right
 
 taurus "Voy a entrar a comprobar que sea seguro. Será más sigiloso que entre solo. Tú quédate vigilando la retaguardia."
@@ -519,8 +523,9 @@ taurus"De acuerdo. Quédate cerca."
 $ renpy.music.set_volume(0.25, channel='sound')
 play music pasos_concreto fadeout 1
 
-scene bg puertaDeOro
 "A la par, los ladrones abren la puerta y se adentran en una habitación oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no esté cubierto de polvo."
+
+scene cuartoArania with fade
 
 show Conan
 
@@ -563,7 +568,6 @@ jump Conan_pelea_con_la_araña
 #Taurus entra solo
 label entra_solo_Taurus:
 
-scene bg puertaDeOro
 show Conan at left
 conan "Está bien, fijate que hay dentro de ese cuarto."
 
@@ -578,13 +582,14 @@ hide Conan
 
 "El ladrón abre la puerta y se adentra en la habitación"
 
+scene cuartoArania with fade
 stop music fadeout 1
 
 "Esta es oscura, tenebrosa y aparentemente olvidada. Telarañas cuelgan por todas partes y no hay objeto que no estuviera cubierto de polvo."
 
 taurus "Diablos… parece que hasta aquí llegas, cimerio…"
 
-"Taurus sale del cuarto"
+"Taurus vuelve a la puerta y asoma su cabeza"
 
 show Conan at left
 
@@ -661,6 +666,8 @@ show Taurus
 
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
+scene cuartoArania
+
 taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
 play sound portazo
@@ -678,8 +685,6 @@ play sound swordCut2
 jump recamara_de_yag_kosha
 
 label Lanzar_espada:
-
-scene puertaDeOro
 
 show Conan
 show Arania at right
@@ -711,6 +716,8 @@ show Taurus
 
 "Se escucha un silencio atroz desde fuera del cuarto por lo que Taurus decide entrar."
 
+scene cuartoArania with fade
+
 taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
 play sound portazo
@@ -730,7 +737,7 @@ jump fin_de_la_partida
 
 #COMIENZO JUAN (ponele)
 label recamara_de_yag_kosha:
-scene remacamara_YagKosha
+scene remacamaraYagKosha
 
 show Conan
 
@@ -769,6 +776,8 @@ hide Conan
 "Conan se acerca con gesto vacilante, y Yag Kosha le indica dónde debía clavar la hoja. Conan aprieta los dientes y hunde profundamente la espada. La sangre fluye, empapando la hoja y su mano, y la criatura se agita antes de quedar inmóvil."
 "Conan, asegurándose de que ya no estaba vivo, extrae lo que parece ser el corazón de Yag Kosha, aunque es distinto a cualquier corazón que hubiera visto. Aprieta la víscera sobre la joya, y sorprendentemente, la sangre fue absorbida por la gema. Con cuidado, Conan sale del recinto y baja por la escalera de plata."
 "Siente que el cuerpo de Yag Kosha está sufriendo una transmutación detrás de él, algo que no debe presenciar. Al llegar a la puerta de ébano con la calavera de plata, la abre y ve a Yara, el brujo, en su lecho de seda negra, bajo los efectos del loto amarillo."
+
+scene recamaraYara with fade
 
 show Conan at left
 conan "¡Yara! ¡Despierta!"
@@ -829,6 +838,8 @@ menu :
 
 label escapa_por_escaleras:
 
+scene escaleras with fade
+
 "Conan huye, bajando una escalera de plata. Al llegar a una sala con soldados caídos, se da cuenta de que su camino está despejado."
 
 jump Conan_llega_a_PB
@@ -836,6 +847,8 @@ jump Conan_llega_a_PB
 label escapa_por_soga:
 
 "Conan atraviesa el mismo camino por el que entró. Cuando llega al cuarto donde combatió a la araña ve el cuerpo frío de Taurus."
+
+scene cuartoArania with fade
 
 if Conan_esta_solo == True:
     show Conan at center
@@ -848,6 +861,8 @@ else:
     
 "Conan llega al balcón."
 
+scene cimaDeLaTorre
+
 menu :
     "Revisar la soga":
         jump Conan_revisa_la_soga
@@ -859,9 +874,13 @@ label Conan_revisa_la_soga:
 show Conan at center
 conan "Que raro, la soga está floja, la ajuste lo suficiente para poder bajar sin ningún problema de esta torre."
 hide Conan
+
 "La soga, firme y bien anudada, soporta su peso sin ceder ni un ápice. Los músculos de Conan se tensan con cada movimiento, pero sus manos expertas se deslizan con precisión sobre la cuerda, controlando el ritmo de su descenso."
 "Siente el tirón familiar en los brazos, pero no es nada a lo que su cuerpo curtido no esté acostumbrado. Sus pies tocan la pared del edificio ocasionalmente, pero no pierde el control."
 "El guerrero desciende como una sombra, ágil y silencioso, su mirada clavada en el suelo que se aproxima rápidamente. Con un último impulso, Conan aterriza en el empedrado del callejón, flexionando sus rodillas para amortiguar el impacto. No hay pausa en sus movimientos; inmediatamente se pone en pie y suelta la soga sin mirar atrás."
+
+scene baseDeLaTorre with fade
+
 show Conan at center
 conan "Suerte que he revisado y ajustado la soga porque si no estaría compartiendo el mismo destino que mi compañero."
 hide Conan
@@ -876,12 +895,16 @@ conan "Tengo que irme rápido sin perder mucho tiempo en revisar si la soga est�
 " Por suerte no estaba tan alto, pero aun así quedó medio dolorido tras la caída."
 hide Conan
 $ Conan_esta_herido = True
+
+scene baseDeLaTorre with fade
 show Conan at center 
 conan "AAAAH!!! Maldita sea qué suerte tengo, por poco casi me mato, tenía que haber revisado la soga antes, pero aun así sigo vivo pero un poco dolorido."
 hide Conan
 
 label Conan_llega_a_PB:
 "Sale por una puerta de plata hacia los jardines, donde la brisa del alba lo estremece."
+
+scene jardinesInternos with fade
 
 if Conan_esta_herido == True:
     jump Conan_no_logra_escapar
@@ -894,6 +917,8 @@ label Conan_no_logra_escapar:
 "Conan estando herido, le está costando escapar de la torre del elefante, La torre empieza a temblar y Conan intenta apresurarse."
 show Conan at center
 conan "Maldita sea, tengo que ser rápido sino no llegaré a escapar de esta torre del infierno. AAAAH!!!"
+
+scene jardinesExternos with fade
 
 "La torre comienza a derrumbarse con Conan dentro."
 hide Conan
@@ -923,6 +948,8 @@ drakos "Maldición Conan, suerte que he llegado en el momento justo para poder r
 show Conan at right
 conan "Muchas gracias… Drakos por haberme salvado, te debo una enorme. Ahora vayámonos de aquí rápidamente antes de que venga una multitud a ver qué pasa."
 
+scene torreDerrumbandoseLejos with fade
+
 "A medida que se iban, tanto Conan como Drakos observaron como la torre se empieza a convertir en una inmensa nube de minúsculas partículas resplandecientes en que ambos se miran muy confundidos y al mismo tiempo muy asombrados por lo que acababa de pasar."
 hide Drakos
 hide Conan
@@ -930,9 +957,13 @@ jump fin_de_la_partida
 
 label Conan_logra_escapar:
 
+scene jardinesExternos with fade
+
 "Conan atraviesa la puerta principal y corre por su vida. El impecable estado físico del bárbaro le permite alejarse lo suficiente para voltear y ver nuevamente la impresionante torre."
 
 Conan "Qué acaba de suceder…? Acaso me han embrujado?"
+
+scene torreDerrumbandoseLejos with fade
 
 "Entre sus dudas, logra observar cómo la estructura comienza a desmoronarse para eventualmente convertirse en una inmensa nube de minúsculas partículas resplandecientes."
 
