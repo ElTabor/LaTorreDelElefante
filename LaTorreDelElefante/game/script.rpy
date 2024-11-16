@@ -8,7 +8,7 @@ define Yara = Character("YARA", color = "#981723")
 
 #BACKGROUNDS
 image cityAlley = "CityAlley.jpg"
-image bar = "Bar.png"
+image bar = "Bar.jpg"
 image cityStreetDrakos = "CityStreet_Drakos.png"
 image cityStreetAlone = "CityStreet_Alone.png"
 image jardinesInternos = "Fondo.jpg"
@@ -20,7 +20,7 @@ image ConanYTaurusEscalando = "Fondo.jpg"
 image ciudadDeFondo = "Fondo.jpg"
 image baseDeLaTorre = "Fondo.jpg"
 image cimaDeLaTorre = "Fondo.jpg"
-image puertaDeOro = "Fondo.jpg"
+image puertaDeOro = "puertaDeOro.png"
 image cuartoArania = "CuartoArania.png"
 image remacamaraYagKosha = "Fondo.jpg"
 image recamaraYara = "Fondo.jpg"
@@ -51,9 +51,8 @@ define spiderSound = "SonidodeArania.mp3"
 define portazo = "Door_Slam.mp3"
 define alertSound = "Sonido-Dealerta.mp3"
 define choirSound = "ChoirSoundEffect.mp3"
-define crowdGasp = "Crowd_Gasp.mp3"
 
-#MUSIC
+#MUSICf
 define cityAmbience = "audio/city_ambience.mp3"
 define forestAmbience = "forest_ambience.mp3"
 define tension = "audio/tension_theme.mp3"
@@ -70,6 +69,7 @@ label start:
 
 #COMIENZO NICO
 scene cityAlley with fade
+
 play music pasos fadeout 1
 "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
 
@@ -222,17 +222,18 @@ show Conan at center
 
 "En la distancia, Conan ve movimiento detrás de otros arbustos y decide correr hacia ellos empuñando su espada, listo para eliminar cualquier amenaza."
 
-play sound pasos_rapidos
+play music pasos_rapidos
 
 hide Conan
 show Corpse at center
 
 "Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien."
+stop music
 
 hide Corpse
 show Taurus at right
 
-"Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
+"Sigiloso, acecha en la oscuridad hasta que se encuentra con una figura misteriosa que rompe el silencio con un susurro, anticipando lo que está por suceder."
 
 show Conan at left
 
@@ -271,7 +272,6 @@ taurus"Fue su error. Cuando se acercó, fue fácil ponerme detrás de él y estr
 "Conan frunció el ceño, y tras una breve pausa, añade:"
 
 conan "Pero cometiste un error."
-play sound crowdGasp
 
 "Los ojos de Taurus, llenos de orgullo, se encendieron de cólera ante esa afirmación."
 
@@ -319,14 +319,14 @@ taurus "Hay puertas y ventanas hábilmente construidas. Pero están cerradas. Lo
 "El cauto espíritu de Conan siente el aura amenazadora que se cierne sobre aquel lugar. Percibe la mirada ardiente de unos ojos invisibles y siente un aroma sutil que le eriza instintivamente el pelo de la nuca como a los sabuesos cuando huelen la presencia de su antiguo enemigo."
 
 show Taurus:
-    xalign 0.7
-    yalign .25
+    xalign 0.6
+    yalign .75
 
 taurus "Sígueme. Ven detrás de mí, si aprecias tu vida."
 
 show conan behind Taurus:
-    xalign 0.95 
-    yalign .25
+    xalign .9
+    yalign .75
 
 "Taurus extrae de su cinto lo que parece ser un tubo de cobre, el nemedio se deja caer nuevamente encima del césped interior. Conan lo sigue de cerca con la espada preparada, pero Taurus lo empuja hacia atrás, contra la pared, y se queda inmóvil."
 "Está en una actitud de tensa expectación y su mirada, al igual que la de Conan, se fija en las sombras de los arbustos que hay cerca de allí. La mata se mueve a pesar de que la brisa deja de soplar."
@@ -334,7 +334,7 @@ show conan behind Taurus:
 
 show lions:
     xalign 0
-    yalign 1.2
+    yalign .8
 
 conan "¡Leones!"
 
@@ -358,7 +358,7 @@ taurus "¡Es la muerte! Si se levanta viento y sopla en nuestra dirección, tend
 
 hide lions
 
-conan "¡Murieron sin lanzar un solo rugido! Taurus, ¿qué era ese polvo?"
+conan "¡Murieron sin lanzar un solo rugido! ¿Taurus, qué era ese polvo?"
 
 hide Taurus
 hide Conan
@@ -398,8 +398,8 @@ scene baseDeLaTorre with dissolve
 show Conan at leftish
 conan "Lánzalo en el lado derecho, veo una saliente allí."
 
-"Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
-"Aun así, el bárbaro siente una inquietud inexplicable, tal vez por el fuerte olor de los leones que domina el aire."
+"Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
+"Aun así, el bárbaro siente una inquietud inexplicable. Tal vez por el fuerte olor de los leones que domina el aire."
 play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
