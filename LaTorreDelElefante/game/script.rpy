@@ -8,9 +8,9 @@ define Yara = Character("YARA", color = "#981723")
 
 #BACKGROUNDS
 image cityAlley = "CityAlley.jpg"
-image bar = "Fondo.jpg"
-image cityStreetDrakos = "Callesdezamora.jpg"
-image cityStreetAlone = "Callesdezamora.jpg"
+image bar = "Bar.png"
+image cityStreetDrakos = "CityStreet_Drakos.png"
+image cityStreetAlone = "CityStreet_Alone.png"
 image jardinesInternos = "Fondo.jpg"
 image jardinesExternos = "Fondo.jpg"
 image ConanVSLeon = "Fondo.jpg"
@@ -18,6 +18,7 @@ image TaurusViendoAlLeonEncimaDeConan = "Fondo.jpg"
 image LeonMuerto = "Fondo.jpg"
 image ConanYTaurusEscalando = "Fondo.jpg"
 image ciudadDeFondo = "Fondo.jpg"
+image baseDeLaTorre = "Fondo.jpg"
 image cimaDeLaTorre = "Fondo.jpg"
 image puertaDeOro = "Fondo.jpg"
 image cuartoArania = "CuartoArania.png"
@@ -33,6 +34,8 @@ image Ladron = "Ladron.png"
 image Taurus = "Taurus.png"
 image YagKosha = "YagKosha.png"
 image Yara = "Yara.png"
+image Corpse = "Corpse.png"
+image Arania = "Arania.png"
 
 #SFX
 define pasos = "pasos.mp3"
@@ -73,21 +76,22 @@ play music pasos fadeout 1
 scene bar with fade
 stop music fadeout 1
 
-"En la mesa mas poblada un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de koth"
+"En la mesa mas poblada, un grupo de delincuentes están atentos a los relatos de un hombre obeso y grosero proveniente de Koth."
 
 show Drakos at center
-drakos "Por Bel, dios de los ladrones, que voy a enseñarles como se roba una mujer; estara del otro lado de la frontera de Zamora antes del amanecer, y allí habrá una caravana esperándola."
+drakos "Por Bel, dios de los ladrones, que voy a enseñarles cómo se roba una mujer. Estará del otro lado de la frontera de Zamora antes del amanecer, donde habrá una caravana esperándola."
 drakos "Un conde de Ofir me prometió trecientas piezas de plata por una joven brithunia de buena familia. Estuve vagando varias semanas por las ciudades fronterizas, donde me hacía pasar por mendigo, hasta que encontré una que valiera la pena."
 drakos "¡Ah, qué guapa es esta golfa! Conozco señores de Shem que darían por ella el secreto de la Torre del Elefante."
 
 hide Drakos
-"Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la manga de su túnica y se da vuelta con el entrecejo fruncido para ver a un hombre alto y corpulento"
+"Mientras Drakos vuelve a su cerveza, siente cómo alguien tira de la manga de su túnica."
+"Se da vuelta con el entrecejo fruncido y ve a un hombre alto y corpulento"
 
 show Conan at right
-conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre.¿Cuál es su secreto?"
+conan "Has mencionado la Torre del Elefante. He escuchado muchas cosas acerca de esa torre. ¿Cuál es su secreto?"
 
 show Drakos at left
-drakos "Y ¿De dónde salus tu? extraño, no pareces de por aquí."
+drakos "¿Y de dónde salus tu, extraño? No pareces de por aquí."
 
 hide Conan
 hide Drakos
@@ -100,7 +104,7 @@ show Conan at left
 
 conan "Soy Cimerio…"
 show Drakos at right
-drakos "No me sorprende, los cimerios son vulgares. Pero hasta el más tonto de su tipo conocen la leyenda de la torre."
+drakos "No me sorprende. Los cimerios son vulgares pero hasta el más tonto de su tipo conocen la leyenda de la torre."
 
 hide Conan
 hide Drakos
@@ -112,7 +116,8 @@ drakos "¿El secreto de la Torre del Elefante? Bueno, cualquier imbécil sabe qu
 show Conan at left
 conan "Yo he visto esa torre. Está en un enorme jardín situado en lo alto de la ciudad y rodeado de elevadas murallas. No he visto guardias. Las murallas parecían fáciles de escalar. ¿Por qué nadie ha robado esa misteriosa piedra preciosa?"
 hide Conan
-drakos "¡Escuchen a este pagano salvaje!¡Pretende robar la joya de Yara!"
+drakos "¡Escuchen a este pagano salvaje!"
+drakos "¡Pretende robar la joya de Yara!"
 drakos "Entonces presta atención y aprende, muchacho. Debes saber que en Zamora, y especialmente en esta ciudad, hay más intrépidos ladrones que en cualquier otro lugar del mundo, incluido Koth."
 drakos "Si algún mortal hubiera sido capaz de robar la piedra preciosa, puedes estar seguro de que habría desaparecido hace mucho tiempo. Tú hablas de escalar las murallas, pero una vez que lo hubieras hecho, desearías irte inmediatamente."
 drakos "Por la noche no hay guardias, es decir, guardias humanos, en los jardines por una buena razón."
@@ -124,10 +129,10 @@ drakos "¡Oíd lo que está diciendo! ¡Este bárbaro debe de ser un águila cap
 
 hide Conan
 hide Drakos
-"Conan, molesto por las carcajadas burlonas de los oyentes y confundido por la falta de cortesía de los locales. Piensa en salir corriendo del lugar pero Drakos continúa con su mofa."
+"Conan, molesto por las carcajadas burlonas de los oyentes y confundido por la falta de cortesía de los locales, piensa en salir corriendo del lugar pero Drakos continúa con su mofa."
 
 show Drakos at right
-drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, diles cómo robarías tú la piedra!"
+drakos "¡Anda, anda! ¡Cuéntales a estos pobres hombres, que han sido ladrones desde antes que a ti te engendraran, cómo robarías tú la piedra!"
 
 show Conan at left
 
@@ -135,11 +140,9 @@ $ renpy.music.set_volume(0.2, channel='music')
 play music tension fadeout 1
 conan "Siempre hay alguna manera de hacerlo, si el deseo está unido al valor."
 
-drakos "¡Cómo! ¿Te atreves a enseñarnos nuestro oficio, y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
+drakos "¡¿Cómo?! ¿Te atreves a enseñarnos nuestro oficio y a insinuar que somos unos cobardes? ¡Vete! ¡Fuera de mi vista!"
 
 "Drakos le da un leve empujón para intimidar a Conan."
-
-
 
 menu Matar_a_Drakos:
     "Sí":
@@ -162,9 +165,9 @@ stop music
 
 hide conan
 
-scene cityAlley with fade
+scene cityStreetAlone with fade
 "La taberna queda atrás mientras Conan avanza sigilosamente por las calles desiertas, dirigiéndose hacia la Torre del Elefante."
-"Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador, aunque los callejones de Zamora le eran desconocidos."
+"Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador aunque los callejones de Zamora le eran desconocidos."
 "A su alrededor, los templos brillan bajo las estrellas, pero las deidades locales no le impresionan. Conan cree en una verdad simple: los dioses, como Crom, son indiferentes y terribles."
 "Frente a él, la Torre del Elefante se alza imponente y misteriosa, rodeada de un jardín exótico protegido por altas murallas."
 "Aunque las leyendas sobre los peligros de la torre y Yara, su guardián oscuro, le rondan la mente, Conan no teme. Da un gran salto y alcanza la cima de la muralla. Ve unos arbustos y se lanza hacia ellos"
@@ -179,7 +182,7 @@ conan "De acuerdo, te voy a dar la oportunidad de redimir tu insolencia acompañ
 hide Conan
 "Conan envaina su espada y extiende su mano. Drakos la toma, se para y se sacude el polvo mientras mira a Conan con una expresión de asombro y terror. Después de levantar a Drakos se dirigen hacia las calles de Zamora."
 
-scene cityStreet with fade
+scene cityStreetDrakos with fade
 play music cityAmbience fadeout 1
 
 show Drakos at left
@@ -194,13 +197,13 @@ drakos "¿Qué no eres cimmerio? Tu cultura se reduce a violencia y destrucción
 
 conan "Ja. Claro que tengo un nombre, Conan. Y tus creencias sobre mi cultura no son más que patrañas. Somos fuertes, poderosos y nos cuesta relacionarnos con sus costumbres civilizadas pero te aseguro que uno de nosotros porta más honor que todo un pueblo de ustedes."
 
-drakos "Claro, y por eso estamos yendo a la torre, ¿verdad? No porque quieras robarte una gema."
+drakos "Claro, y por eso estamos yendo a la torre, verdad? No porque quieras robarte una gema."
 
 conan "La gema es lo de menos, imbécil. El verdadero valor está en demostrar mi poder."
 
-"Mientras terminan de discutir sobre sus valores se ve la torre a lo lejos."
+"Mientras terminan de discutir sobre sus valores, la imponente torre se asoma en el horizonte."
 
-drakos "Como digas… hasta aquí llego yo. Ya cumplí mi deuda?"
+drakos "Como digas… hasta aquí llego yo. ¿Ya cumplí mi deuda?"
 
 conan "Así es. Gracias por la compañía."
 
@@ -222,11 +225,11 @@ show Conan at center
 play sound pasos_rapidos
 
 hide Conan
-show corpse at center
+show Corpse at center
 
 "Al llegar, descubre un cuerpo estrangulado, lo que indica la presencia de alguien."
 
-hide corpse
+hide Corpse
 show Taurus at right
 
 "Sigiloso, acechando en la oscuridad hasta que se encuentra con una figura misteriosa, que rompe el silencio con un susurro, anticipando lo que está por suceder."
@@ -317,13 +320,13 @@ taurus "Hay puertas y ventanas hábilmente construidas. Pero están cerradas. Lo
 
 show Taurus:
     xalign 0.7
-    yalign 1
+    yalign .25
 
 taurus "Sígueme. Ven detrás de mí, si aprecias tu vida."
 
 show conan behind Taurus:
     xalign 0.95 
-    yalign 1
+    yalign .25
 
 "Taurus extrae de su cinto lo que parece ser un tubo de cobre, el nemedio se deja caer nuevamente encima del césped interior. Conan lo sigue de cerca con la espada preparada, pero Taurus lo empuja hacia atrás, contra la pared, y se queda inmóvil."
 "Está en una actitud de tensa expectación y su mirada, al igual que la de Conan, se fija en las sombras de los arbustos que hay cerca de allí. La mata se mueve a pesar de que la brisa deja de soplar."
@@ -331,7 +334,7 @@ show conan behind Taurus:
 
 show lions:
     xalign 0
-    yalign .75
+    yalign 1.2
 
 conan "¡Leones!"
 
@@ -392,7 +395,7 @@ menu:
 
 label derecho:
 scene baseDeLaTorre with dissolve
-show Conan
+show Conan at leftish
 conan "Lánzalo en el lado derecho, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
@@ -400,7 +403,8 @@ conan "Lánzalo en el lado derecho, veo una saliente allí."
 play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
-show Taurus with dissolve
+
+show Taurus at rightish with dissolve
 taurus "¡Buen ojo! Ahora..."
 
 show ConanAlerta with vpunch
@@ -579,7 +583,6 @@ play music pasos_concreto fadeout 1
 
 hide Conan
 
-
 "El ladrón abre la puerta y se adentra en la habitación"
 
 scene cuartoArania with fade
@@ -591,9 +594,9 @@ taurus "Diablos… parece que hasta aquí llegas, cimerio…"
 
 "Taurus vuelve a la puerta y asoma su cabeza"
 
-show Conan at left
 
 taurus "Es seguro, pasa."
+hide Taurus
 
 
 $ renpy.music.set_volume(0.15, channel='sound')
@@ -603,6 +606,7 @@ $ renpy.music.set_volume(0.25, channel='sound')
 play music radakan fadeout 1
 
 "Sin pensarlo mucho, Conan se adentra en el cuarto solo para escuchar un fuerte portazo detrás de él."
+show Conan at left
 
 taurus "Debo reconocer que eres muy hábil, bárbaro! Pero te vendría bien un poco de viveza."
 
@@ -668,19 +672,21 @@ show Taurus
 
 scene cuartoArania
 
+show Taurus at left
+
 taurus "Espero que esa estúpida araña haya hecho su trabajo."
 
 play sound portazo
 
 "Al abrir las puertas ve el cuerpo de la araña en una posición postmortem y ni bien entra siente unos pasos acercándose cada vez más rápido hacia él."
 
-show Conan at left
+show Conan at right
 
 conan "¡Te dije que me las ibas a pagar, ladrón malnacido!"
 
-play sound swordCut2
-
 "Sin ningún tipo de tapujo Conan corre hacia Taurus y le corta el cuello de una manera limpia dejando que se muera ahogado en su sangre."
+play sound swordCut2
+hide Taurus
 
 jump recamara_de_yag_kosha
 
@@ -851,12 +857,12 @@ label escapa_por_soga:
 scene cuartoArania with fade
 
 if Conan_esta_solo == True:
-    show Conan at center
-    Conan "Te irás al infierno maldito. Esta torre te sepultará, será tu propia tumba"
+    show Conan at left
+    conan "Te irás al infierno maldito. Esta torre te sepultará, será tu propia tumba"
     hide Conan 
 else:
     show Conan at left
-    Conan "Lo lamento, compañero. Mi misión a cambiado y no he podido completar tu plan."
+    conan "Lo lamento, compañero. Mi misión a cambiado y no he podido completar tu plan."
     hide Conan 
     
 "Conan llega al balcón."
