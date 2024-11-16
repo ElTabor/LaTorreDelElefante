@@ -9,22 +9,22 @@ define ladrón = Character("LADRÓN", color = "#0a0a0a")
 define yagKosha = Character("YAG KOSHA", color = "#91ef91")
 define Yara = Character("YARA", color = "#981723")
 
-image fondo_calle = "images/Conan_1.png"
-image taurus = "images/Taurus.png"
+image cityAlley = "CityAlley.jgg"
 image Taurus = "images/Taurus.png"
 image Yara = "images/Yara.png"
-image Yara = "images/Yara.png"
-image conan = "images/ConandeFrente.png"
 image Conan = "images/ConandeFrente.png"
-image yagkosha = "images/Yag_Kosha.png"
 image YagKosha = "images/Yag_Kosha.png"
 
 
 define pasos = "audio/pasos.mp3"
 define swordCut = "audio/espadacortando.mp3"
+define windCut = "Wind_Cut.mp3"
+define lionRoar = "lion_roar.mp3"
 
-define cityAmbience = "audio/ambiente relajada de una ciudad.mp3"
-define tension = "audio/Tension.mp3"
+define cityAmbience = "audio/city_ambience.mp3"
+define forestAmbience = "forest_ambience.mp3"
+define tension = "audio/tension_theme.mp3"
+define suspense = "suspense_theme.mp3"
 
 default Conan_esta_solo = False
 default Conan_esta_herido = False
@@ -34,7 +34,7 @@ default Conan_mata_a_Drakos = False
 label start:
 
 scene bg Conan_Caminando_Por_Un_Callejón_Iluminado_Tenuemente with fade
-show fondo_calle
+show cityAlley
 play music pasos fadeout 1
 "Conan se encuentra caminando en un cajellon de la ciudad dirigiendose hacia lo que seria un bar lleno de personas"
 
@@ -326,51 +326,57 @@ hide taurus
 hide conan
 
 scene bg JardinesDeLaTorre with fade
-show Taurus at left
+play music forestAmbience fadein 2.0
+show Taurus at left with moveinleft
 
 Taurus "Están hechas con flores de loto negro, que crecen en las selvas remotas de Khitai, donde solo habitan los monjes de cráneo amarillo de Yun. Esas flores causan la muerte al que las huele."
 
 "Conan se arrodilla al lado de los enormes animales muertos, asegurándose de que no podían hacerle daño. Mueve la cabeza pensando que la magia de las tierras exóticas es terrible y misteriosa a los ojos de los bárbaros del norte."
 
-show Conan
+show Conan at right with moveinright
 Conan "¿Por qué no matamos a los soldados de la torre de la misma manera?"
 
-show Taurus
+show Taurus with dissolve
 Taurus "Porque ese es todo el polvo que tengo. Su obtención fue una hazaña que hubiera bastado para hacerme famoso entre todos los ladrones del mundo. Lo robé de una caravana que se dirigía a Estigia. ¡Pero, vamos ya, por Bel! ¿Vamos a pasarnos toda la noche hablando?"
 
-scene bg BaseDeLaTorre with dissolve
+scene bg BaseDeLaTorre with fade
+stop music fadeout 1.0
+play music suspense fadein 2.0
 "Taurus y Conan se arrastran silenciosamente hasta la base de la torre. Sin decir una palabra, Taurus desenrolla una cuerda con un gancho de acero en uno de sus extremos."
 
-"¿En que lado de la torre tira Taurus el gancho?."
+"¿En que lado de la torre tira Taurus el gancho?"
 
-menu :
+menu:
     "Lado derecho":
         jump derecho
     "Lado izquierdo":
         jump izquierdo
 
 label derecho:
-scene bg BaseDeLaTorre
+scene bg BaseDeLaTorre with dissolve
 show Conan
 Conan "Lánzalo en el lado derecho, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
 "Aun así, el bárbaro siente una inquietud inexplicable, tal vez por el fuerte olor de los leones que domina el aire."
+play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
-show Taurus
+show Taurus with dissolve
 Taurus "¡Buen ojo! Ahora..."
 
-show ConanAlerta
+show ConanAlerta with vpunch
+play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar de inmediato, ya que la muerte silenciosa acecha desde arriba. Con una sola mirada, el cimmerio percibe la gigantesca sombra de un león, listo para atacar."
+    
 scene ConanVsLeon
 "Ningún hombre civilizado es tan rápido como el bárbaro. Su espada, brillando bajo las estrellas, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
+
 scene TaurusViendoAlLeonEncimaDeConan
 "Taurus, maldiciendo para sus adentros, se agacha y ve a Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal yace muerto, con el cráneo partido. Con su ayuda, Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
 
-scene bg LeonMuerto
-
-show Taurus at right
+scene bg LeonMuerto with fade
+show Taurus at right with moveinleft
 Taurus "¿Estás herido, amigo?"
 
 show Conan at left
@@ -378,30 +384,28 @@ Conan "¡Por Crom, no! Pero me libre por poco. ¿Por qué esa maldita bestia no 
 jump continuacion
 
 label izquierdo:
-scene bg BaseDeLaTorre
+scene bg BaseDeLaTorre with dissolve
 show Conan
 Conan "Lánzalo en el lado izquierdo, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
 "Aun así, el bárbaro siente una inquietud inexplicable, tal vez por el fuerte olor de los leones que domina el aire."
+play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
 show Taurus
 Taurus "¡Buen ojo! Ahora debemos subir con cuidado"    
 
+show ConanDolorido with vpunch
+play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar con mucha ansiedad y reacción rápido, ya que la muerte silenciosa acecha dentro de los jardines."
-"Apurado, intenta subir rápido pero no logra ver al león que lo está acechando."
-scene ConanVsLeon
-$ Conan_esta_herido = True
+    
+scene ConanVsLeon1
 "Intenta desenvainar su espada, pero el enorme felino es mucho más rápido, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
-"Taurus, maldiciendo para sus adentros, se agacha y ve a  Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal logra masticar el costado de la costilla izquierda de Conan."
-"Luego el bárbaro logra sacar su espada y gracias a la adrenalina que surge dentro de su ser logra clavarle la espada en la parte de atrás del cuello del león y así provocar su muerte."
-"Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
-
-scene bg BaseDeLaTorre
-
+    
+scene bg BaseDeLaTorre with dissolve
 show TaurusPreocupado
-Taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre.¿Estas bien Conan?"
+Taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre. ¿Estas bien Conan?"
 
 show ConanDolorido
 Conan "Si, no te preocupes por mí. Sigamos a lo que vinimos, entremos a la torre. No hay tiempo que perder."
@@ -412,46 +416,43 @@ label continuacion:
 show Taurus at right
 Taurus "Todo es extraño en este jardín. Los leones atacan en silencio, al igual que las otras muertes. Pero sigamos; aunque hemos hecho poco ruido en la pelea, los soldados pueden haber oído algo, a menos que estén dormidos o borrachos."
 Taurus "Esa fiera está en alguna otra parte del jardín y escapa de la muerte de las flores, pero seguramente ya no hay más animales. Ahora debemos trepar por esta cuerda; imagino que no es necesario preguntar a un cimmerio si puede hacerlo."
-
-show ConanDolorido at left
-Conan "Si resiste mi peso."
+    
+show Conan at left with dissolve
+Conan "Si resiste mi peso..."
 
 Taurus "Puede aguantar tres veces mi propio peso. Está hecha con trenzas de mujeres muertas, que yo mismo cogí de sus tumbas a medianoche, y que luego sumergí en la mortífera savia del árbol de upas, para hacerlas resistentes."
 Taurus "Yo subiré primero, y luego me seguirás tú de cerca."
 
-scene bg ConanYTaurusEscalando
-
+scene bg ConanYTaurusEscalando with fade
 "El nemedio agarra firmemente la cuerda, enganchando una rodilla en ella, y comienza a subir con agilidad, como un gato, a pesar de su corpulento cuerpo. El cimmerio lo sigue de cerca. Aunque la cuerda oscila y gira sobre sí misma, ambos hombres continúan escalando sin problemas."
 "Desde lo alto, pueden ver el borde de la torre, sobresaliendo ligeramente de la pared, lo que facilita el ascenso, con la cuerda colgando a unos cincuenta centímetros a los lados."
-
-scene bg ciudadDeFondo
+    
+scene bg ciudadDeFondo with fade
 "En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio."
 
-scene bg bordeDeLaTorre
+scene bg bordeDeLaTorre with dissolve
 "Finalmente, Taurus extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado. Conan, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodean y que brillan como estrellas incrustadas en un cielo de plata."
 "Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
-
+    
 show Conan at left
 Conan "Aquí hay una fabulosa fortuna, Taurus."
 
 show Taurus at right
 "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
-
+    
 scene bg laTorreFondoCiudad
 "Conan trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
 "Al otro lado del techo, se alza una especie de habitación hecha del mismo material que las paredes de la torre, adornada con pequeñas gemas."
-scene bg puertaDeOro
-"La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."    
-scene bg laTorreFondoCiudad
-"Conan dirige su mirada hacia el vasto océano de luces a lo lejos, y luego observa a Taurus, quien está recogiendo la cuerda."
-"El nemedio le muestra el lugar donde el gancho de acero se había asegurado, y vieron que la punta estaba apenas enganchada debajo de una brillante joya en el lado interior del borde."
+    
+scene bg puertaDeOro with dissolve
+"La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
 
-scene bg puertaDeOro
 show Taurus at left
 "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
+    
+scene bg dentroTerraza with dissolve
+"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro."
 
-scene bg dentroTerraza
-"Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro. "
 
 scene bg puertaDeOro
 show Taurus at right
