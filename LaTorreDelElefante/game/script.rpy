@@ -400,6 +400,8 @@ conan "Lánzalo en el lado derecho, veo una saliente allí."
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
 "Aun así, el bárbaro siente una inquietud inexplicable. Tal vez por el fuerte olor de los leones que domina el aire."
 play sound windCut
+
+show Taurus at left
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
 
@@ -454,8 +456,6 @@ conan "Si, no te preocupes por mí. Sigamos a lo que vinimos, entremos a la torr
 hide Taurus
 
 label continuacion:
-show Taurus at left with dissolve
-show Conan at right with dissolve
 taurus "Todo es extraño en este jardín. Los leones atacan en silencio, al igual que las otras muertes. Pero sigamos; aunque hemos hecho poco ruido en la pelea, los soldados pueden haber oído algo, a menos que estén dormidos o borrachos."
 taurus "Esa fiera está en alguna otra parte del jardín y escapa de la muerte de las flores, pero seguramente ya no hay más animales. Ahora debemos trepar por esta cuerda; imagino que no es necesario preguntar a un cimmerio si puede hacerlo."
     
