@@ -51,6 +51,8 @@ define spiderSound = "SonidodeArania.mp3"
 define portazo = "Door_Slam.mp3"
 define alertSound = "Sonido-Dealerta.mp3"
 define choirSound = "ChoirSoundEffect.mp3"
+define suspiro = "Suspiro.mp3"
+define soplar = "Soplar.mp3"
 
 #MUSICf
 define cityAmbience = "city_ambience.mp3"
@@ -58,6 +60,7 @@ define forestAmbience = "city_ambience.mp3"
 define tension = "tension_theme.mp3"
 define suspense = "suspense_theme.mp3"
 define radakan = "radakan-dramaticevent.mp3"
+define sonidoTaberna = "SonidoTaberna.mp3"
 
 #VARIABLES
 default Conan_esta_solo = False
@@ -66,6 +69,8 @@ default Conan_mata_a_Drakos = False
 
 
 label start:
+
+$ renpy.music.set_volume(0.2, channel='music')
 
 #COMIENZO NICO
 scene cityAlley with fade
@@ -160,6 +165,8 @@ scene cityStreetAlone with fade
 "Con su cuerpo marcado por cicatrices de múltiples batallas, moviéndose con la destreza de un cazador aunque los callejones de Zamora le eran desconocidos."
 "A su alrededor, los templos brillan bajo las estrellas, pero las deidades locales no le impresionan. Conan cree en una verdad simple: los dioses, como Crom, son indiferentes y terribles."
 "Frente a él, la Torre del Elefante se alza imponente y misteriosa, rodeada de un jardín exótico protegido por altas murallas."
+
+stop music
 "Aunque las leyendas sobre los peligros de la torre y Yara, su guardián oscuro, le rondan la mente, Conan no teme. Da un gran salto y alcanza la cima de la muralla. Ve unos arbustos y se lanza hacia ellos"
 
 jump Conan_llega_a_la_torre
@@ -200,6 +207,7 @@ hide Drakos
 hide Conan
 stop music
 "Drakos observa cómo Conan se sumerge en aquella torre de tantos mitos mientras se pregunta si es una simple ilusión o lleva algo de verdad en sus palabras."
+
 "A su vez, Conan salta el muro que resguarda la torre. Una vez dentro, ve unos arbustos y se oculta entre ellos"    
 #FIN NICO
 #COMIENZO TOMÁS
@@ -220,11 +228,11 @@ show Corpse at center
 stop music
 
 hide Corpse
-show Taurus at right
+show Taurus at left
 
 "Sigiloso, acecha en la oscuridad hasta que se encuentra con una figura misteriosa que rompe el silencio con un susurro, anticipando lo que está por suceder."
 
-show Conan at left
+show Conan at right
 
 taurus "Tú no eres soldado. Eres un ladrón, igual que yo."
 
@@ -272,6 +280,8 @@ conan "Deberías haber ocultado el cadáver entre los arbustos."
 
 conan "No cambian la guardia hasta pasada la medianoche, lo sé, pero si alguien viene antes y encuentra el cuerpo, nos arriesgamos a que den la alarma."
 
+play sound suspiro
+
 "Taurus respiró hondo, calmándose, aunque no parecía gustarle la idea de recibir una lección del cimmerio."
 
 taurus "El novato pretende enseñar su arte al maestro. Si alguien viene a buscarlo ahora y encuentra su cuerpo, irá a comunicarle inmediatamente la noticia a Yara, lo que nos daría tiempo para escapar. Pero si no lo hallaran, rastrearán los arbustos y nos atraparán como a ratas en una trampa."
@@ -300,7 +310,7 @@ hide Taurus
 
 scene jardinesInternos with fade
 
-"La parte inferior de la torre se parece mucho a la parte que se ve desde fuera del jardín: un cilindro perfecto y brillante, que no parece tener ninguna abertura."
+"La parte inferior de la torre se parece mucho a la parte que se ve desde fuera del jardín: Un cilindro perfecto y brillante, que no parece tener ninguna abertura."
 
 taurus "Hay puertas y ventanas hábilmente construidas. Pero están cerradas. Los soldados respiran el aire que viene de arriba."
 
@@ -334,6 +344,9 @@ conan "Yo veo tres, pero quizá haya más en los matorrales. Nos atacarán de un
 taurus "¡Silencio!"
 
 "Se oyen ruidos sordos provenientes de las sombras y se ven avanzar los ojos resplandecientes. Conan percibe las inmensas mandíbulas babeantes y las colas que azotan el aire en todas direcciones. La tensión es insoportable."
+
+play sound soplar
+
 "El cimmerio empuña la espada, a la espera del inevitable ataque de los gigantescos cuerpos. Entonces, Taurus lleva el extremo del tubo a los labios y sopla con fuerza."
 "Un gran chorro de polvo dorado sale por el otro extremo y se extiende instantáneamente formando una densa nube de color verde amarillento que cubre los arbustos, ocultando los resplandecientes ojos."
 "Taurus corre apresuradamente hacia el muro. Conan lo mira sin comprender. La densa nube oculta los matorrales y no se oye nada."
@@ -348,9 +361,6 @@ taurus "¡Es la muerte! Si se levanta viento y sopla en nuestra dirección, tend
 hide lions
 
 conan "¡Murieron sin lanzar un solo rugido! ¿Taurus, qué era ese polvo?"
-
-hide Taurus
-hide Conan
 
 #FIN TOMÁS
 #COMIENZO FER
@@ -383,8 +393,8 @@ menu:
         jump izquierdo
 
 label derecho:
-scene baseDeLaTorre with dissolve
-show Conan at left
+scene baseDeLaTorre with fade
+show Conan at right
 conan "Lánzalo en el lado derecho, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
@@ -393,10 +403,10 @@ play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
 
-show Taurus at right with dissolve
+show Taurus at left
 taurus "¡Buen ojo! Ahora..."
 
-show Conan with vpunch
+show Conan at right with vpunch
 play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar de inmediato, ya que la muerte silenciosa acecha desde arriba. Con una sola mirada, el cimmerio percibe la gigantesca sombra de un león, listo para atacar."
     
@@ -408,16 +418,16 @@ scene TaurusViendoAlLeonEncimaDeConan
 "Taurus, maldiciendo para sus adentros, se agacha y ve a Conan luchando por liberarse del enorme peso del león. Para su asombro, el animal yace muerto, con el cráneo partido. Con su ayuda, Conan aparta el cuerpo y se levanta, aún empuñando su espada ensangrentada."
 
 scene LeonMuerto with fade
-show Taurus at right
+show Taurus at left
+show Conan at right
 taurus "¿Estás herido, amigo?"
 
-show Conan at left
 conan "¡Por Crom! No, pero me libre por poco."
 jump continuacion
 
 label izquierdo:
 scene baseDeLaTorre with dissolve
-show Conan
+show Conan at right
 conan "Lánzalo en el lado izquierdo, veo una saliente allí."
 
 "Mientras que Taurus se prepara para lanzar la soga a la saliente. Conan, atento, apoya su oído en la pared de la torre, pero no oye nada, lo que indica que los guardias dentro no se han percatado de su presencia."
@@ -425,10 +435,10 @@ conan "Lánzalo en el lado izquierdo, veo una saliente allí."
 play sound windCut
 "Con un movimiento firme, Taurus lanza la cuerda, y el gancho desaparece sobre el borde de la torre. Tras comprobar que está bien sujeto, tira de ella sin aflojarla."
 
-show Taurus
+show Taurus at left
 taurus "¡Buen ojo! Ahora debemos subir con cuidado"    
 
-show Conan with vpunch
+show Conan at right with vpunch
 play sound lionRoar
 "El instinto salvaje de Conan lo hace reaccionar con mucha ansiedad y reacción rápido, ya que la muerte silenciosa acecha dentro de los jardines."
     
@@ -436,19 +446,19 @@ scene ConanVSLeon
 "Intenta desenvainar su espada, pero el enorme felino es mucho más rápido, se mueve con una fuerza desesperada, y en un instante, el hombre y la bestia ruedan juntos por el suelo."
     
 scene baseDeLaTorre with dissolve
-show Taurus
+show Taurus at left
+show Conan at right
 taurus "Oh por dios!. No me esperaba ese enorme león en este lugar de la torre. ¿Estas bien Conan?"
 
-show Conan
 conan "Si, no te preocupes por mí. Sigamos a lo que vinimos, entremos a la torre. No hay tiempo que perder."
 hide Taurus
 
 label continuacion:
-show Taurus at right
+show Taurus at left with dissolve
+show Conan at right with dissolve
 taurus "Todo es extraño en este jardín. Los leones atacan en silencio, al igual que las otras muertes. Pero sigamos; aunque hemos hecho poco ruido en la pelea, los soldados pueden haber oído algo, a menos que estén dormidos o borrachos."
 taurus "Esa fiera está en alguna otra parte del jardín y escapa de la muerte de las flores, pero seguramente ya no hay más animales. Ahora debemos trepar por esta cuerda; imagino que no es necesario preguntar a un cimmerio si puede hacerlo."
     
-show Conan at left with dissolve
 conan "Si resiste mi peso..."
 
 taurus "Puede aguantar tres veces mi propio peso. Está hecha con trenzas de mujeres muertas, que yo mismo cogí de sus tumbas a medianoche, y que luego sumergí en la mortífera savia del árbol de upas, para hacerlas resistentes."
@@ -462,13 +472,14 @@ scene ciudadDeFondo with fade
 "En silencio, siguen subiendo mientras las luces de la ciudad se hacen más pequeñas y el brillo de las estrellas se atenuaba frente al resplandor de las joyas que adornan el borde del edificio."
 
 scene cimaDeLaTorre with dissolve
+
 "Finalmente, Taurus extiende su mano, se agarra al borde y, con un rápido impulso, salta al otro lado. Conan, por su parte, se detiene un momento en el borde, fascinado por las deslumbrantes y frías joyas que lo rodean y que brillan como estrellas incrustadas en un cielo de plata."
 "Desde la distancia, su fulgor se funde en un resplandor blanco, pero, de cerca, cada una de las piedras centellean con millones de matices, hipnotizando al joven con sus destellos."
     
-show Conan at left
+show Conan at right
 conan "Aquí hay una fabulosa fortuna, Taurus."
 
-show Taurus at right
+show Taurus at left
 "¡Apresúrate! Si conseguimos el Corazón, esto y todo lo demás será nuestro."
 
 "Conan trepa por el resplandeciente borde de la torre. El techo está unos metros más abajo del saliente enjoyado. Es plano y de un material de color azul oscuro, combinado con oro, lo que le da la apariencia de un inmenso zafiro salpicado de polvo dorado."
@@ -477,8 +488,8 @@ show Taurus at right
 scene puertaDeOro with dissolve
 "La única puerta visible es de oro macizo, con paneles tallados y piedras preciosas incrustadas que brillan con un resplandor helado."
 
-show Taurus at right
-show Conan at left
+show Taurus at left
+show Conan at right
 taurus "Tuvimos suerte una vez más. Es de imaginar que el peso de ambos podría haber destrozado la piedra. Ahora sígueme, que los verdaderos peligros de nuestra aventura acaban de empezar. Estamos en la guarida de la serpiente, y no sabemos dónde está escondida."
 
 "Atraviesan a rastras la misteriosa y brillante terraza como tigres detrás de su presa y se detienen delante de la puerta de oro."
@@ -505,7 +516,7 @@ menu CONFIAR_EN_Taurus:
 label entrar_con_Taurus:
 conan "No. Es mejor que entremos juntos. Si es una trampa, necesitarás ayuda"
 
-show Taurus at right
+show Taurus at left
 
 taurus"De acuerdo. Quédate cerca."
 
@@ -516,29 +527,31 @@ play music pasos_concreto fadeout 1
 
 scene cuartoArania with fade
 
-show Conan
+show Conan at right
 
 play music radakan fadeout 1
 
 conan "Taurus, cuidado!"
 hide Conan
 
-show Taurus
+show Taurus at left
 taurus "Aaagh! Diablos! ¿Qué es esta cosa?"
 
 "Una pegajosa sustancia cubre a Taurus. Pegándolo al suelo e inmovilizándolo."
 
-show Conan at left
+show Conan at right
 
 conan "Por Crom! ¿De dónde vino eso?"
 
 "Nuevamente, el instinto bárbaro de Conan salva al cimmerio de un nuevo ataque. Una enorme araña intenta embestir desde atrás. Al fallar, la araña continúa hacia Taurus."
 
-show Arania at right
-
 play sound alertSound
 
 conan "¡NOOO!"
+
+show Arania behind Taurus with moveinright:
+    xalign .2
+    yalign .8
 
 "La araña toma a Taurus por el cuello con sus colmillos y le arrancó la cabeza de un tirón."
 
@@ -549,8 +562,6 @@ conan "Maldita! ¡Las pagarás!"
 play sound pasos_muchos
 
 "La araña carga hacia Conan nuevamente."
-
-
 jump Conan_pelea_con_la_araña
 
 
@@ -559,7 +570,7 @@ label entra_solo_Taurus:
 
 conan "Está bien, fijate que hay dentro de ese cuarto."
 
-show Taurus at right
+show Taurus at left
 
 taurus "De acuerdo. Ya vuelvo"
 
@@ -590,7 +601,7 @@ $ renpy.music.set_volume(0.25, channel='sound')
 
 play music radakan fadeout 1
 
-show Conan at left
+show Conan at right
 "Sin pensarlo mucho, Conan se adentra en el cuarto solo para escuchar un fuerte portazo detrás de él."
 
 taurus "Debo reconocer que eres muy hábil, bárbaro! Pero te vendría bien un poco de viveza."
@@ -604,7 +615,7 @@ conan "¡NO! Abre Taurus, cobarde. ¡Me las vas a pagar!"
 
 "El cimmerio siente como algo cae lentamente del techo, y al darse vuelta ahí la ve. Una enorme araña que vigila la entrada al cuarto de la gema."
 
-show Arania at right
+show Arania at left
 
 play sound spiderSound
 
@@ -622,15 +633,15 @@ menu cómo_atacar_a_la_araña:
 
 label De_frente:
 
-show Conan 
-show Arania
-
 play sound swordDraw
 
 "Conan empuña su espada y ataca a la araña de frente."
 
 conan "¡AAAAH!"
 
+
+show Arania at right with moveinleft
+show Conan at left with moveinright
 play sound swordCut
 
 "Justo antes de alcanzarla, el bárbaro se desliza por debajo de ella y la apuñala en el pecho. La araña se desploma y Conan se acerca para recuperar su espada."
@@ -672,8 +683,6 @@ jump recamara_de_yag_kosha
 
 label Lanzar_espada:
 
-hide Taurus
-
 "Conan esquiva a la araña con mucha agilidad. En sus movimientos, nota que en el medio del cuarto hay un candelabro gigante y se le viene un plan a la cabeza."
 
 conan "Asquerosa araña, ven ¡Atácame!"
@@ -681,6 +690,7 @@ conan "Asquerosa araña, ven ¡Atácame!"
 play sound windCut
 "La araña se va encima del bárbaro sedienta de sangre y con violencia. Cuando está por llegar, el cimmerio anticipa su ataque y tira su espada a la base del candelabro haciendo que se rompa y caiga."
 
+show Arania at right behind Conan with moveinleft
 
 "Para su infortunio, la araña esquiva el enorme candelabro y aprovecha el asombro de Conan para atacar su cuello y romperlo."
 
@@ -708,7 +718,8 @@ taurus "Espero que esa estúpida araña haya hecho su trabajo."
 play sound portazo
 
 "Taurus abre las puertas y ve el cuerpo de Conan tirado en el medio del cuarto. Confiado se fue acercando de a poco hasta percatarse de que tiene el cuello roto, asustado se da media vuelta para salir corriendo de la habitación pero ya era demasiado tarde"
-show Arania at right
+show Arania behind Taurus at left with moveinright:
+    xalign .2
 play sound spiderSound
 "La araña lo captura con su tela lo deja colgado en el cuarto y aprovecha para devorarlo poco a poco comenzando con su cabeza."
 
@@ -763,7 +774,7 @@ hide Conan
 
 scene recamaraYara with fade
 
-show Conan at left
+show Conan at right
 conan "¡Yara! ¡Despierta!"
 
 "Los ojos se abren al instante y se vuelven fríos y crueles como los de un buitre. La negra figura vestida de seda se yergue lúgubre sobre el cimmerio."
@@ -833,11 +844,11 @@ label escapa_por_soga:
 scene cuartoArania with fade
 
 if Conan_esta_solo == True:
-    show Conan at left
+    show Conan at right
     conan "Te irás al infierno maldito. Esta torre te sepultará, será tu propia tumba"
     hide Conan 
 else:
-    show Conan at left
+    show Conan at right
     conan "Lo lamento, compañero. Mi misión a cambiado y no he podido completar tu plan."
     hide Conan 
     
