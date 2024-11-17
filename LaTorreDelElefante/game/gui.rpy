@@ -26,32 +26,32 @@ define config.check_conflicting_properties = True
 ## Los colores del texto de la interfaz
 
 ## El color enfatizado usado en la interfaz para subrayar texto.
-define gui.accent_color = '#003366'
+define gui.accent_color = '#cccc00'
 
 ## El color del botón de texto cuando no está seleccionado ni enfocado.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#888888'
 
 ## El color 'small' se usa para el texto pequeño, que necesita destacar más.
-define gui.idle_small_color = '#606060'
+define gui.idle_small_color = '#aaaaaa'
 
 ## El color usado en botones y barras que ganan foco.
-define gui.hover_color = '#003366'
+define gui.hover_color = '#e0e066'
 
 ## El color del botón de texto seleccionado pero no enfocado. Un botón está
 ## seleccionado si indica el valor actual de la pantalla o preferencia.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#ffffff'
 
 ## El color de los botones de texto que no pueden ser seleccionados.
-define gui.insensitive_color = '#7070707f'
+define gui.insensitive_color = '#8888887f'
 
 ## Colores de la parte vacía de las barras. No se usan directamente, sino en la
 ## regeneración de las imágenes de barra.
-define gui.muted_color = '#6684a3'
-define gui.hover_muted_color = '#99adc1'
+define gui.muted_color = '#515100'
+define gui.hover_muted_color = '#7a7a00'
 
 ## Colores del texto del diálogo y menú.
-define gui.text_color = '#404040'
-define gui.interface_text_color = '#404040'
+define gui.text_color = '#ffffff'
+define gui.interface_text_color = '#ffffff'
 
 
 ## Tipos y tamaños de letra ####################################################
@@ -212,9 +212,9 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_idle_color = '#888888'
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#7070707f'
+define gui.choice_button_text_insensitive_color = '#8888887f'
 
 
 ## Botones de partidas #########################################################
